@@ -1,0 +1,65 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}AdminBundle:Users:update{% endblock %}
+
+{% block pageTitle %}
+    <li>
+        <a href="{{ path("db_dashboard_list") }}">Dashboard</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <a href="{{ path("ab_users_list") }}">Users</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <a href="ab_users_update">Update</a>
+    </li>
+{% endblock %}
+
+{% block body %}
+
+    <div class="box box-primary">
+        <div class="box-header">
+        </div><!-- /.box-header -->
+            {{ form_start(form, {'method': 'POST'}) }}
+        <div class="box-body row">
+            <div class="form-group col-md-6">
+                <label for="users_userId_id">{{ form_label(form.username) }}</label>
+                {{ form_widget(form.username, {'attr': {'id' : 'users_userid_id','class': 'form-control','placeholder': 'UserId'}}) }}
+            </div>                
+            <div class="form-group col-md-6">
+                <label for="users_lastname_id">{{ form_label(form.lastname) }}</label>
+                {{ form_widget(form.lastname, {'attr': {'id' : 'users_lastname_id','class': 'form-control','placeholder': 'User Lastname'}}) }}
+            </div>
+            <div class="form-group col-md-6">
+                <label for="users_password_id">{{ form_label(form.password) }}</label>
+                {{ form_widget(form.password, {'attr': {'id' : 'users_password_id','class': 'form-control','placeholder': 'User Password'}}) }}
+            </div>
+            <div class="form-group col-md-6">
+                <label for="users_firstname_id">{{ form_label(form.firstname) }}</label>
+                {{ form_widget(form.firstname, {'attr': {'id' : 'users_firstname_id','class': 'form-control','placeholder': 'User Firstname'}}) }}
+            </div>
+            <div class="form-group col-md-6 col-md-offset-6">
+                <label for="users_mail_id">{{ form_label(form.mail) }}</label>
+                {{ form_widget(form.mail, {'attr': {'id' : 'users_mail_id','class': 'form-control','placeholder': 'User Mail'}}) }}
+            </div>
+            <div class="form-group col-md-6 col-md-offset-6">
+                <label for="users_enabled_id">{{ form_label(form.enabled) }}</label>
+                {{ form_widget(form.enabled, {'id' : 'users_enabled_id', 'attr': {'class': 'form-control','placeholder': 'User Enabled'}}) }}
+            </div>
+            
+            <div class="form-group col-md-12 ">
+                <label for="multiple" class="control-label">Roles</label>
+                <select id="multiple" class="form-control select2-multiple" multiple>
+                    <option value="AK">Alaska</option>
+                    <option value="HI" disabled="disabled">Hawaii</option>
+                </select>
+            </div>
+        </div>
+
+
+        <div class="box-footer pull-right">
+                <a href="{{ path ("ab_users_list")}}"> <input class="btn btn-success" type="submit" value="Save"/> </a>
+        </div>
+    </div><!-- /.box -->
+{% endblock %}

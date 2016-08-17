@@ -1,0 +1,34 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}AdminBundle:Roles:see{% endblock %}
+
+{% block pageTitle %}
+    <li>
+        <a href="{{ path("db_dashboard_list") }}">Dashboard</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <a href="{{ path("ab_roles_list") }}">Entities</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <a href="ab_roles_see"><b>See</b></a>
+    </li>
+{% endblock %}
+
+{% block body %}
+    <div class="box box-primary">
+        <div class="box-header">
+        </div><!-- /.box-header -->
+        <div class="box-body">
+            <div class="form-group">
+                <label for="country">Description</label>
+                <div class="form-control">{{ entity.description }}</div>    
+            </div>
+            
+            
+            <div class="box-footer pull-right">
+                <a href="{{ path ("ab_roles_update", {'id':entity.id})}}"> <input class="btn btn-success" type="submit" value="Update"/> </a>
+            </div>
+        </div><!-- /.box-body --> 
+{% endblock %}

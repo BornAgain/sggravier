@@ -1,0 +1,46 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}CubesBundle:Cubes:Add{% endblock %}
+
+{% block pageTitle %}
+    <li>
+        <a href="{{ path("db_dashboard_list") }}">Dashboard</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <a href="{{ path("cb_cubes_list") }}">Cubes</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <a href="cb_cubes_add"><b>Add</b></a>
+    </li>
+{% endblock %}
+
+{% block body %}
+<div class="box box-primary">
+        <div class="box-header">
+            <h3 class="box-title"></h3>
+        </div><!-- /.box-header -->
+        <!-- form start -->
+        {{ form_start(form, {'method': 'POST'}) }}
+        <div class="box-body row">
+            <div class="form-group col-md-6">
+                <label for="cubes_contract_id">{{ form_label(form.contract) }}</label>
+                {{ form_widget(form.contract, {'attr': {'tabindex' : '1','id' : 'cubes_contract_id','class': 'form-control','placeholder': 'Contract'}}) }}
+            </div>
+            <div class="form-group col-md-6">
+                <label for="cubes_locContract_id">{{ form_label(form.locContract) }}</label>
+                {{ form_widget(form.locContract, {'attr': {'tabindex' : '3','id' : 'cubes_loccontract_id','class': 'form-control','placeholder': 'Loc_Contract'}}) }}
+            </div>  
+            <div class="form-group col-md-6">
+                <label for="cubes_aMTLCY_id">{{ form_label(form.aMTLCY) }}</label>
+                {{ form_widget(form.aMTLCY, {'attr': {'tabindex' : '4','id' : 'cubes_amtlcy_id','class': 'form-control','placeholder': 'AMT LCY'}}) }}
+            </div>
+        
+    </div>
+
+    <div class="box-footer pull-right">
+        <a href="{{ path ("cb_cubes_list")}}"> <input class="btn btn-success" type="submit" value="Save"/> </a>
+    </div>
+    {{ form_end(form) }}
+{% endblock %}

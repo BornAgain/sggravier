@@ -6,6 +6,9 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+
+
 
 class WidgetType extends AbstractType {
 
@@ -15,9 +18,15 @@ class WidgetType extends AbstractType {
      */
     public function buildForm(FormBuilderInterface $builder, array $options) {
         $builder
-        ->add('name', TextType::class, array(
-        'label' => 'Title'))
-        ->add('type')
+                ->add('name', TextType::class, array(
+                    'label' => 'Title'))
+                ->add('type', ChoiceType::class, array(
+                    'choices' => array(
+                        'linechart' => 'Line Chart',
+                        'piechart' => 'Pie Chart',
+                    ),
+                    'label'=> 'Type'
+                ))
                 ->add('query')
                 ->add('position')
                 ->add('dashboard', 'entity', array(

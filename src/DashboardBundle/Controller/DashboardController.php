@@ -48,7 +48,7 @@ class DashboardController extends Controller {
         $em2 = $this->getDoctrine()->getManager();
         $entity = $em2->getRepository("DashboardBundle:Dashboard")->find(1);
         foreach ($entity->getWidget() as $key => $widget) {
-            
+
             $em = $this->getDoctrine()->getEntityManager();
             $connection = $em->getConnection();
             $statement = $connection->prepare($widget->getQuery());
@@ -62,7 +62,7 @@ class DashboardController extends Controller {
                 $data_array[] = intval($value_d['value_l']);
             }
             $ob = new Highchart();
-            $ob->chart->renderTo($widget->getType());  // eg : "linechart"
+            $ob->chart->renderTo('widget'.($key+1));  // eg : "linechart"
             $ob->title->text($widget->getName());
 
             if ($widget->getType() === "linechart") {
@@ -75,10 +75,16 @@ class DashboardController extends Controller {
                 $ob->xAxis->title(array('text' => "Horizontal axis title"));
                 $ob->yAxis->title(array('text' => "Vertical axis title"));
                 $ob->series($series);
-            }      
+            } elseif ($widget->getType() === "piechart") {
+                
+            }
             
-            $returnData['chart'.($key+1)] = $ob;
+            $returnData['chart' . ($key + 1)] = $ob;
         }
+
+        
+        $returnData['countWidgets'] = \count($entity->getWidget());
+        
 
 
         return $this->render('DashboardBundle:Dashboard:home.html.twig', $returnData);

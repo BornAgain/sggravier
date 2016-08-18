@@ -23,6 +23,10 @@
         {{ form_start(form, {'method': 'POST'}) }}
         <div class="box-body row">
             <div class="form-group col-md-12">
+                <label for="widget_type_name">{{ form_label(form.name) }}</label>
+                {{ form_widget(form.name, {'attr': {'tabindex' : '1','id' : 'widget_type_id','class': 'form-control','placeholder': 'Widget name'}}) }}
+            </div> 
+            <div class="form-group col-md-12">
                 <label for="widget_type_id">{{ form_label(form.type) }}</label>
                 {{ form_widget(form.type, {'attr': {'tabindex' : '1','id' : 'widget_type_id','class': 'form-control','placeholder': 'Widget type'}}) }}
             </div>  
@@ -38,6 +42,7 @@
                 <label for="multiple" class="control-label">Dashboard</label>
                 {{ form_widget(form.dashboard, {'attr': {'tabindex' : '1','id' : 'widget_position_id','class': 'form-control','placeholder': 'Widget position'}}) }}
             </div>
+            
         </div>
 
         <div class="box-footer pull-right">

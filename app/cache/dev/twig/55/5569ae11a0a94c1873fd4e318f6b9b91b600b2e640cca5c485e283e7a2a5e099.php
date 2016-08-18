@@ -21,8 +21,8 @@ class __TwigTemplate_f4be00f8c3a73304eec0382ab7d029b62adf275b959f17ee40397a9f7da
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_464a4cb853829639aeada868a69f63519ba7d2d801480d9f963ad357c8935b4b = $this->env->getExtension("native_profiler");
-        $__internal_464a4cb853829639aeada868a69f63519ba7d2d801480d9f963ad357c8935b4b->enter($__internal_464a4cb853829639aeada868a69f63519ba7d2d801480d9f963ad357c8935b4b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::base.html.twig"));
+        $__internal_5884b4ebd4c73bf5bd161a8ff0ffc25cb2b0fb5e22431b630e68396ee9cf58d8 = $this->env->getExtension("native_profiler");
+        $__internal_5884b4ebd4c73bf5bd161a8ff0ffc25cb2b0fb5e22431b630e68396ee9cf58d8->enter($__internal_5884b4ebd4c73bf5bd161a8ff0ffc25cb2b0fb5e22431b630e68396ee9cf58d8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::base.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -118,7 +118,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         <img src=\"";
         // line 58
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/layouts/layout/img/LogoMakr.png"), "html", null, true);
-        echo "\" alt=\"logo\" class=\"logo-default/>
+        echo "\" alt=\"logo\" class=\"logo-default img-responsive\"/>
                     </a>
                     <div class=\"menu-toggler sidebar-toggler\"> </div>
                 </div>
@@ -1486,26 +1486,26 @@ License: You must have a valid license purchased only from themeforest(the above
 
 </html>";
         
-        $__internal_464a4cb853829639aeada868a69f63519ba7d2d801480d9f963ad357c8935b4b->leave($__internal_464a4cb853829639aeada868a69f63519ba7d2d801480d9f963ad357c8935b4b_prof);
+        $__internal_5884b4ebd4c73bf5bd161a8ff0ffc25cb2b0fb5e22431b630e68396ee9cf58d8->leave($__internal_5884b4ebd4c73bf5bd161a8ff0ffc25cb2b0fb5e22431b630e68396ee9cf58d8_prof);
 
     }
 
     // line 36
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_15a7f3b89686a2de8fd66514b5193d8404d32163f0a46ba106724c3d0eb0c1b8 = $this->env->getExtension("native_profiler");
-        $__internal_15a7f3b89686a2de8fd66514b5193d8404d32163f0a46ba106724c3d0eb0c1b8->enter($__internal_15a7f3b89686a2de8fd66514b5193d8404d32163f0a46ba106724c3d0eb0c1b8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_9a0cd7462c785ea5a1391d249a6a1c3b2e6f796547dc0282dc1f3023bdc469ee = $this->env->getExtension("native_profiler");
+        $__internal_9a0cd7462c785ea5a1391d249a6a1c3b2e6f796547dc0282dc1f3023bdc469ee->enter($__internal_9a0cd7462c785ea5a1391d249a6a1c3b2e6f796547dc0282dc1f3023bdc469ee_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         
-        $__internal_15a7f3b89686a2de8fd66514b5193d8404d32163f0a46ba106724c3d0eb0c1b8->leave($__internal_15a7f3b89686a2de8fd66514b5193d8404d32163f0a46ba106724c3d0eb0c1b8_prof);
+        $__internal_9a0cd7462c785ea5a1391d249a6a1c3b2e6f796547dc0282dc1f3023bdc469ee->leave($__internal_9a0cd7462c785ea5a1391d249a6a1c3b2e6f796547dc0282dc1f3023bdc469ee_prof);
 
     }
 
     // line 639
     public function block_pageTitle($context, array $blocks = array())
     {
-        $__internal_99740c58ea15aac9fe4ef4ffb72e6a304ecfed74df9c4c43423aa37410ad74eb = $this->env->getExtension("native_profiler");
-        $__internal_99740c58ea15aac9fe4ef4ffb72e6a304ecfed74df9c4c43423aa37410ad74eb->enter($__internal_99740c58ea15aac9fe4ef4ffb72e6a304ecfed74df9c4c43423aa37410ad74eb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "pageTitle"));
+        $__internal_c3e9ae352fca698a7abf662b5db20d3cf87b70887b1e546ac7ae921bed5d715e = $this->env->getExtension("native_profiler");
+        $__internal_c3e9ae352fca698a7abf662b5db20d3cf87b70887b1e546ac7ae921bed5d715e->enter($__internal_c3e9ae352fca698a7abf662b5db20d3cf87b70887b1e546ac7ae921bed5d715e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "pageTitle"));
 
         // line 640
         echo "                            <li>
@@ -1518,51 +1518,51 @@ License: You must have a valid license purchased only from themeforest(the above
 
                             ";
         
-        $__internal_99740c58ea15aac9fe4ef4ffb72e6a304ecfed74df9c4c43423aa37410ad74eb->leave($__internal_99740c58ea15aac9fe4ef4ffb72e6a304ecfed74df9c4c43423aa37410ad74eb_prof);
+        $__internal_c3e9ae352fca698a7abf662b5db20d3cf87b70887b1e546ac7ae921bed5d715e->leave($__internal_c3e9ae352fca698a7abf662b5db20d3cf87b70887b1e546ac7ae921bed5d715e_prof);
 
     }
 
     // line 660
     public function block_titlePage($context, array $blocks = array())
     {
-        $__internal_58e8dd57cb86a9bd6b169e193de2fc682e2a5c37e9668ed3a8f17f59ba4c2ed0 = $this->env->getExtension("native_profiler");
-        $__internal_58e8dd57cb86a9bd6b169e193de2fc682e2a5c37e9668ed3a8f17f59ba4c2ed0->enter($__internal_58e8dd57cb86a9bd6b169e193de2fc682e2a5c37e9668ed3a8f17f59ba4c2ed0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "titlePage"));
+        $__internal_a8cc867fd0304c62a2f4c9e2bef83ab4579f249d0d4b92de0c5f5e93cc3bf20e = $this->env->getExtension("native_profiler");
+        $__internal_a8cc867fd0304c62a2f4c9e2bef83ab4579f249d0d4b92de0c5f5e93cc3bf20e->enter($__internal_a8cc867fd0304c62a2f4c9e2bef83ab4579f249d0d4b92de0c5f5e93cc3bf20e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "titlePage"));
 
         
-        $__internal_58e8dd57cb86a9bd6b169e193de2fc682e2a5c37e9668ed3a8f17f59ba4c2ed0->leave($__internal_58e8dd57cb86a9bd6b169e193de2fc682e2a5c37e9668ed3a8f17f59ba4c2ed0_prof);
+        $__internal_a8cc867fd0304c62a2f4c9e2bef83ab4579f249d0d4b92de0c5f5e93cc3bf20e->leave($__internal_a8cc867fd0304c62a2f4c9e2bef83ab4579f249d0d4b92de0c5f5e93cc3bf20e_prof);
 
     }
 
     // line 665
     public function block_body($context, array $blocks = array())
     {
-        $__internal_44a386006eacd0bd84d0feeae5f0a344092eda3b7b2b51e5c02bc80862c768e7 = $this->env->getExtension("native_profiler");
-        $__internal_44a386006eacd0bd84d0feeae5f0a344092eda3b7b2b51e5c02bc80862c768e7->enter($__internal_44a386006eacd0bd84d0feeae5f0a344092eda3b7b2b51e5c02bc80862c768e7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_c2d059d28747061bba870404682e318c8b8edb1aac6d557b66576aaa36d4f3e9 = $this->env->getExtension("native_profiler");
+        $__internal_c2d059d28747061bba870404682e318c8b8edb1aac6d557b66576aaa36d4f3e9->enter($__internal_c2d059d28747061bba870404682e318c8b8edb1aac6d557b66576aaa36d4f3e9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         
-        $__internal_44a386006eacd0bd84d0feeae5f0a344092eda3b7b2b51e5c02bc80862c768e7->leave($__internal_44a386006eacd0bd84d0feeae5f0a344092eda3b7b2b51e5c02bc80862c768e7_prof);
+        $__internal_c2d059d28747061bba870404682e318c8b8edb1aac6d557b66576aaa36d4f3e9->leave($__internal_c2d059d28747061bba870404682e318c8b8edb1aac6d557b66576aaa36d4f3e9_prof);
 
     }
 
     // line 1259
     public function block_plg_javascripts($context, array $blocks = array())
     {
-        $__internal_c5e771ffbcef69adcd42cc71d78934640028db79d381e291de8d2777d1081a4c = $this->env->getExtension("native_profiler");
-        $__internal_c5e771ffbcef69adcd42cc71d78934640028db79d381e291de8d2777d1081a4c->enter($__internal_c5e771ffbcef69adcd42cc71d78934640028db79d381e291de8d2777d1081a4c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "plg_javascripts"));
+        $__internal_200fc5f0427051976e43b9586fc7a62c71360ce3a8ceb61148abf8a2c16aa91a = $this->env->getExtension("native_profiler");
+        $__internal_200fc5f0427051976e43b9586fc7a62c71360ce3a8ceb61148abf8a2c16aa91a->enter($__internal_200fc5f0427051976e43b9586fc7a62c71360ce3a8ceb61148abf8a2c16aa91a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "plg_javascripts"));
 
         
-        $__internal_c5e771ffbcef69adcd42cc71d78934640028db79d381e291de8d2777d1081a4c->leave($__internal_c5e771ffbcef69adcd42cc71d78934640028db79d381e291de8d2777d1081a4c_prof);
+        $__internal_200fc5f0427051976e43b9586fc7a62c71360ce3a8ceb61148abf8a2c16aa91a->leave($__internal_200fc5f0427051976e43b9586fc7a62c71360ce3a8ceb61148abf8a2c16aa91a_prof);
 
     }
 
     // line 1294
     public function block_script_javascripts($context, array $blocks = array())
     {
-        $__internal_82237c61500b303ae6f6ba8275d4e56a2c5961d529207a8fe50b341268af1263 = $this->env->getExtension("native_profiler");
-        $__internal_82237c61500b303ae6f6ba8275d4e56a2c5961d529207a8fe50b341268af1263->enter($__internal_82237c61500b303ae6f6ba8275d4e56a2c5961d529207a8fe50b341268af1263_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "script_javascripts"));
+        $__internal_5bd4a6d4a27e709cf8bb35d0e464b6bdb6c53a39c035a3763b146ade4dd0ff2e = $this->env->getExtension("native_profiler");
+        $__internal_5bd4a6d4a27e709cf8bb35d0e464b6bdb6c53a39c035a3763b146ade4dd0ff2e->enter($__internal_5bd4a6d4a27e709cf8bb35d0e464b6bdb6c53a39c035a3763b146ade4dd0ff2e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "script_javascripts"));
 
         
-        $__internal_82237c61500b303ae6f6ba8275d4e56a2c5961d529207a8fe50b341268af1263->leave($__internal_82237c61500b303ae6f6ba8275d4e56a2c5961d529207a8fe50b341268af1263_prof);
+        $__internal_5bd4a6d4a27e709cf8bb35d0e464b6bdb6c53a39c035a3763b146ade4dd0ff2e->leave($__internal_5bd4a6d4a27e709cf8bb35d0e464b6bdb6c53a39c035a3763b146ade4dd0ff2e_prof);
 
     }
 
@@ -1638,7 +1638,7 @@ License: You must have a valid license purchased only from themeforest(the above
 /*                 <!-- BEGIN LOGO -->*/
 /*                 <div class="page-logo">*/
 /*                     <a href="index.html">*/
-/*                         <img src="{{ asset('assets/layouts/layout/img/LogoMakr.png')}}" alt="logo" class="logo-default/>*/
+/*                         <img src="{{ asset('assets/layouts/layout/img/LogoMakr.png')}}" alt="logo" class="logo-default img-responsive"/>*/
 /*                     </a>*/
 /*                     <div class="menu-toggler sidebar-toggler"> </div>*/
 /*                 </div>*/

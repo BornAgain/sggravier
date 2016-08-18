@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Dashboard
  *
- * @ORM\Table(name="widget")
+ * @ORM\Table(name="dh_widget")
  * @ORM\Entity(repositoryClass="DashboardBundle\Repository\WidgetRepository")
  */
 class Widget
@@ -29,6 +29,13 @@ class Widget
      */
 
     private $id;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=255)
+     */
+    private $name;
 
     /**
      * @var string
@@ -157,5 +164,28 @@ class Widget
     public function getDashboard()
     {
         return $this->dashboard;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     * @return Widget
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string 
+     */
+    public function getName()
+    {
+        return $this->name;
     }
 }

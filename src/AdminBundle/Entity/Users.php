@@ -3,6 +3,7 @@
 namespace AdminBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * Users
@@ -10,8 +11,8 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="users")
  * @ORM\Entity(repositoryClass="AdminBundle\Repository\UsersRepository")
  */
-class Users
-{
+class Users implements UserInterface, \Serializable {
+
     /**
      * @var int
      *
@@ -48,30 +49,35 @@ class Users
      * @ORM\Column(name="lastname", type="string", length=255)
      */
     private $lastname;
-    
+
     /**
      * @var string
      *
      * @ORM\Column(name="mail", type="string", length=255)
      */
-    
     private $mail;
 
-    
+    /**
+
+     * @ORM\Column(name="salt", type="string", length=255)
+
+     */
+    private $salt;
+
     /**
      * @var \DateTime
      *
      * @ORM\Column(name="createDate", type="datetime")
      */
     private $createDate;
-    
+
     /**
      * @var \DateTime
      *
      * @ORM\Column(name="updateDate", type="datetime")
      */
     private $updateDate;
-    
+
     /**
      * @var bool
      *
@@ -86,26 +92,19 @@ class Users
      */
     private $enabled;
 
-
-
-    
     /**
 
-   * @ORM\ManyToOne(targetEntity="AdminBundle\Entity\Roles")
-
-   * @ORM\JoinColumn(nullable=false)
-
-   */
-
-    private $roleUser; // Notez le « s », une annonce est liée à plusieurs candidatures  
+     * @ORM\ManyToMany(targetEntity="AdminBundle\Entity\Roles", cascade={"persist"})
+     *
+     */
+    private $roles_sg;
 
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
-    public function getId()
-    {
+    public function getId() {
         return $this->id;
     }
 
@@ -115,8 +114,7 @@ class Users
      * @param string $username
      * @return Users
      */
-    public function setUsername($username)
-    {
+    public function setUsername($username) {
         $this->username = $username;
 
         return $this;
@@ -125,10 +123,9 @@ class Users
     /**
      * Get username
      *
-     * @return string 
+     * @return string
      */
-    public function getUsername()
-    {
+    public function getUsername() {
         return $this->username;
     }
 
@@ -138,8 +135,7 @@ class Users
      * @param string $password
      * @return Users
      */
-    public function setPassword($password)
-    {
+    public function setPassword($password) {
         $this->password = $password;
 
         return $this;
@@ -148,10 +144,9 @@ class Users
     /**
      * Get password
      *
-     * @return string 
+     * @return string
      */
-    public function getPassword()
-    {
+    public function getPassword() {
         return $this->password;
     }
 
@@ -161,8 +156,7 @@ class Users
      * @param string $firstname
      * @return Users
      */
-    public function setFirstname($firstname)
-    {
+    public function setFirstname($firstname) {
         $this->firstname = $firstname;
 
         return $this;
@@ -171,10 +165,9 @@ class Users
     /**
      * Get firstname
      *
-     * @return string 
+     * @return string
      */
-    public function getFirstname()
-    {
+    public function getFirstname() {
         return $this->firstname;
     }
 
@@ -184,8 +177,7 @@ class Users
      * @param string $lastname
      * @return Users
      */
-    public function setLastname($lastname)
-    {
+    public function setLastname($lastname) {
         $this->lastname = $lastname;
 
         return $this;
@@ -194,10 +186,9 @@ class Users
     /**
      * Get lastname
      *
-     * @return string 
+     * @return string
      */
-    public function getLastname()
-    {
+    public function getLastname() {
         return $this->lastname;
     }
 
@@ -207,8 +198,7 @@ class Users
      * @param string $mail
      * @return Users
      */
-    public function setMail($mail)
-    {
+    public function setMail($mail) {
         $this->mail = $mail;
 
         return $this;
@@ -217,10 +207,9 @@ class Users
     /**
      * Get mail
      *
-     * @return string 
+     * @return string
      */
-    public function getMail()
-    {
+    public function getMail() {
         return $this->mail;
     }
 
@@ -230,8 +219,7 @@ class Users
      * @param \DateTime $createDate
      * @return Users
      */
-    public function setCreateDate($createDate)
-    {
+    public function setCreateDate($createDate) {
         $this->createDate = $createDate;
 
         return $this;
@@ -240,10 +228,9 @@ class Users
     /**
      * Get createDate
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
-    public function getCreateDate()
-    {
+    public function getCreateDate() {
         return $this->createDate;
     }
 
@@ -253,8 +240,7 @@ class Users
      * @param \DateTime $updateDate
      * @return Users
      */
-    public function setUpdateDate($updateDate)
-    {
+    public function setUpdateDate($updateDate) {
         $this->updateDate = $updateDate;
 
         return $this;
@@ -263,10 +249,9 @@ class Users
     /**
      * Get updateDate
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
-    public function getUpdateDate()
-    {
+    public function getUpdateDate() {
         return $this->updateDate;
     }
 
@@ -276,8 +261,7 @@ class Users
      * @param boolean $changedPassword
      * @return Users
      */
-    public function setChangedPassword($changedPassword)
-    {
+    public function setChangedPassword($changedPassword) {
         $this->changedPassword = $changedPassword;
 
         return $this;
@@ -286,10 +270,9 @@ class Users
     /**
      * Get changedPassword
      *
-     * @return boolean 
+     * @return boolean
      */
-    public function getChangedPassword()
-    {
+    public function getChangedPassword() {
         return $this->changedPassword;
     }
 
@@ -299,61 +282,108 @@ class Users
      * @param boolean $enabled
      * @return Users
      */
-    public function setEnabled($enabled)
-    {
+    public function setEnabled($enabled) {
         $this->enabled = $enabled;
 
         return $this;
     }
-
+       
     /**
      * Get enabled
      *
-     * @return boolean 
+     * @return boolean
      */
-    public function getEnabled()
-    {
+    public function getEnabled() {
         return $this->enabled;
     }
+
     /**
      * Constructor
      */
-    public function __construct()
-    {
-        $this->roleUser = new \Doctrine\Common\Collections\ArrayCollection();
+    public function __construct() {
+        $this->roles = new \Doctrine\Common\Collections\ArrayCollection();
     }
-
- 
-
 
 
     /**
-     * Set roleUser
+     * Set salt
      *
-     * @param \AdminBundle\Entity\Roles $roleUser
+     * @param string $string
      * @return Users
      */
-    public function setRoleUser(\AdminBundle\Entity\Roles $roleUser)
-    {
-        $this->roleUser = $roleUser;
+    public function setSalt($salt) {
+        $this->salt = $salt;
 
         return $this;
     }
 
     /**
-     * Get roleUser
+     * Get salt
      *
-     * @return \AdminBundle\Entity\Roles 
+     * @return \Doctrine\Common\Collections\Collection
      */
-    public function getRoleUser()
-    {
-        return $this->roleUser;
+    public function getSalt() {
+        return $this->salt;
     }
     
-    public function getRoles()
+    
+    public function __toString()
     {
-        $roles = array();
-        $rolesArray = $this->roleUser->getDescription();
-        return $rolesArray;
+    return (string) $this->description;
+    }
+
+    
+    /**
+     * Get erasecredentials
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function eraseCredentials() {   
+    }
+
+    public function getRoles() {
+        return array('ROLE_USER');
+    }
+
+    public function serialize() {
+        
+    }
+
+    public function unserialize($serialized) {
+        
+    }
+
+
+    /**
+     * Add roles_sg
+     *
+     * @param \AdminBundle\Entity\Roles $rolesSg
+     * @return Users
+     */
+    public function addRolesSg(\AdminBundle\Entity\Roles $rolesSg)
+    {
+        $this->roles_sg[] = $rolesSg;
+
+        return $this;
+    }
+
+    /**
+     * Remove roles_sg
+     *
+     * @param \AdminBundle\Entity\Roles $rolesSg
+     */
+    public function removeRolesSg(\AdminBundle\Entity\Roles $rolesSg)
+    {
+        $this->roles_sg->removeElement($rolesSg);
+    }
+
+    /**
+     * Get roles_sg
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getRolesSg()
+    {
+        return $this->roles_sg;
     }
 }

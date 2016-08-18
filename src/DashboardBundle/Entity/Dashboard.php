@@ -12,7 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Dashboard
  *
- * @ORM\Table(name="dashboard")
+ * @ORM\Table(name="dh_dashboard")
  * @ORM\Entity(repositoryClass="DashboardBundle\Repository\DashboardRepository")
  */
 class Dashboard

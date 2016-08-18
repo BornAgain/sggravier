@@ -268,6 +268,16 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'ab_users_update')), array (  '_controller' => 'AdminBundle\\Controller\\UsersController::updateAction',));
             }
 
+            // ab_users_delete
+            if (0 === strpos($pathinfo, '/users/delete') && preg_match('#^/users/delete/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'ab_users_delete')), array (  '_controller' => 'AdminBundle\\Controller\\UsersController::deleteAction',));
+            }
+
+            // login_user
+            if ($pathinfo === '/users/login') {
+                return array (  '_controller' => 'AdminBundle\\Controller\\UsersController::loginAction',  '_route' => 'login_user',);
+            }
+
         }
 
         // sample_default_index

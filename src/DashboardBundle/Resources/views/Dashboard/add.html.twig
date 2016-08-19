@@ -8,7 +8,7 @@
         <i class="fa fa-circle"></i>
     </li>
     <li>
-        <a href="db_dashboard_add"><b>Add</b></a>
+        <b>Add</b>
     </li>
 {% endblock %}
 
@@ -18,7 +18,7 @@
         <!-- form start -->
         {{ form_start(form, {'method': 'POST'}) }}
         <div class="box-body row">
-            <div class="form-group">
+            <div class="form-group col-md-12">
                 <label for="dashboard_name_id">{{ form_label(form.name) }}</label>
                 {{ form_widget(form.name, {'attr': {'tabindex' : '1','id' : 'dashboard_name_id','class': 'form-control','placeholder': 'Dashboard name'}}) }}
             </div>   

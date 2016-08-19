@@ -64,10 +64,10 @@ class Users extends \AdminBundle\Entity\Users implements \Doctrine\ORM\Proxy\Pro
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'id', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'userId', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'password', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'firstname', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'lastname', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'createDate', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'updateDate', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'changedPassword', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'enabled');
+            return array('__isInitialized__', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'id', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'username', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'password', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'firstname', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'lastname', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'mail', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'salt', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'createDate', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'updateDate', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'changedPassword', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'enabled', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'roles_sg');
         }
 
-        return array('__isInitialized__', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'id', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'userId', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'password', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'firstname', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'lastname', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'createDate', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'updateDate', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'changedPassword', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'enabled');
+        return array('__isInitialized__', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'id', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'username', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'password', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'firstname', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'lastname', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'mail', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'salt', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'createDate', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'updateDate', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'changedPassword', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'enabled', '' . "\0" . 'AdminBundle\\Entity\\Users' . "\0" . 'roles_sg');
     }
 
     /**
@@ -191,23 +191,23 @@ class Users extends \AdminBundle\Entity\Users implements \Doctrine\ORM\Proxy\Pro
     /**
      * {@inheritDoc}
      */
-    public function setUserId($userId)
+    public function setUsername($username)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setUserId', array($userId));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setUsername', array($username));
 
-        return parent::setUserId($userId);
+        return parent::setUsername($username);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getUserId()
+    public function getUsername()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUserId', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUsername', array());
 
-        return parent::getUserId();
+        return parent::getUsername();
     }
 
     /**
@@ -279,6 +279,72 @@ class Users extends \AdminBundle\Entity\Users implements \Doctrine\ORM\Proxy\Pro
     /**
      * {@inheritDoc}
      */
+    public function setMail($mail)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setMail', array($mail));
+
+        return parent::setMail($mail);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getMail()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getMail', array());
+
+        return parent::getMail();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setCreateDate($createDate)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCreateDate', array($createDate));
+
+        return parent::setCreateDate($createDate);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getCreateDate()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCreateDate', array());
+
+        return parent::getCreateDate();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setUpdateDate($updateDate)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setUpdateDate', array($updateDate));
+
+        return parent::setUpdateDate($updateDate);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getUpdateDate()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUpdateDate', array());
+
+        return parent::getUpdateDate();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function setChangedPassword($changedPassword)
     {
 
@@ -318,6 +384,116 @@ class Users extends \AdminBundle\Entity\Users implements \Doctrine\ORM\Proxy\Pro
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getEnabled', array());
 
         return parent::getEnabled();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setSalt($salt)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setSalt', array($salt));
+
+        return parent::setSalt($salt);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getSalt()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getSalt', array());
+
+        return parent::getSalt();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function __toString()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', array());
+
+        return parent::__toString();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function eraseCredentials()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'eraseCredentials', array());
+
+        return parent::eraseCredentials();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getRoles()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getRoles', array());
+
+        return parent::getRoles();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function serialize()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'serialize', array());
+
+        return parent::serialize();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function unserialize($serialized)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'unserialize', array($serialized));
+
+        return parent::unserialize($serialized);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function addRolesSg(\AdminBundle\Entity\Roles $rolesSg)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addRolesSg', array($rolesSg));
+
+        return parent::addRolesSg($rolesSg);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function removeRolesSg(\AdminBundle\Entity\Roles $rolesSg)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeRolesSg', array($rolesSg));
+
+        return parent::removeRolesSg($rolesSg);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getRolesSg()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getRolesSg', array());
+
+        return parent::getRolesSg();
     }
 
 }

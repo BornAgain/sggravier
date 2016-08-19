@@ -111,6 +111,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'DashboardBundle\\Controller\\DashboardController::addAction',  '_route' => 'db_dashboard_add',);
             }
 
+            // db_dashboard_delete
+            if (0 === strpos($pathinfo, '/dashboard/delete') && preg_match('#^/dashboard/delete/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'db_dashboard_delete')), array (  '_controller' => 'DashboardBundle\\Controller\\DashboardController::deleteAction',));
+            }
+
             // db_dashboard_home
             if ($pathinfo === '/dashboard/home') {
                 return array (  '_controller' => 'DashboardBundle\\Controller\\DashboardController::homeAction',  '_route' => 'db_dashboard_home',);
@@ -133,19 +138,24 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // dashboard_default_index
+        // dh_dashboard
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'dashboard_default_index');
+                return $this->redirect($pathinfo.'/', 'dh_dashboard');
             }
 
-            return array (  '_controller' => 'DashboardBundle\\Controller\\DefaultController::indexAction',  '_route' => 'dashboard_default_index',);
+            return array (  '_controller' => 'DashboardBundle\\Controller\\DefaultController::indexAction',  '_route' => 'dh_dashboard',);
         }
 
         if (0 === strpos($pathinfo, '/widget')) {
             // db_widget_add
             if ($pathinfo === '/widget/add') {
                 return array (  '_controller' => 'DashboardBundle\\Controller\\WidgetController::addAction',  '_route' => 'db_widget_add',);
+            }
+
+            // db_widget_delete
+            if (0 === strpos($pathinfo, '/widget/delete') && preg_match('#^/widget/delete/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'db_widget_delete')), array (  '_controller' => 'DashboardBundle\\Controller\\WidgetController::deleteAction',));
             }
 
             // db_widget_list
@@ -202,6 +212,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'AdminBundle\\Controller\\EntitiesController::addAction',  '_route' => 'ab_entities_add',);
             }
 
+            // ab_entities_delete
+            if (0 === strpos($pathinfo, '/entities/delete') && preg_match('#^/entities/delete/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'ab_entities_delete')), array (  '_controller' => 'AdminBundle\\Controller\\EntitiesController::deleteAction',));
+            }
+
             // ab_entities_list
             if ($pathinfo === '/entities/list') {
                 return array (  '_controller' => 'AdminBundle\\Controller\\EntitiesController::listAction',  '_route' => 'ab_entities_list',);
@@ -223,6 +238,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             // ab_roles_add
             if ($pathinfo === '/roles/add') {
                 return array (  '_controller' => 'AdminBundle\\Controller\\RolesController::addAction',  '_route' => 'ab_roles_add',);
+            }
+
+            // ab_roles_delete
+            if (0 === strpos($pathinfo, '/roles/delete') && preg_match('#^/roles/delete/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'ab_roles_delete')), array (  '_controller' => 'AdminBundle\\Controller\\RolesController::deleteAction',));
             }
 
             // ab_roles_list

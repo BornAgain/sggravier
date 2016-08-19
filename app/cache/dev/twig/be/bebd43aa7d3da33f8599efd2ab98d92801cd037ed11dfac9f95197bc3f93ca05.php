@@ -23,83 +23,93 @@ class __TwigTemplate_3685be3b802fa24cb34c11645f4734bc6e381cea370ea5ebb985b1483f8
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_b27a51b6fa23e1fcf683338d5d0b834cbd5ca5a8fca616fc2470571c955ff21c = $this->env->getExtension("native_profiler");
-        $__internal_b27a51b6fa23e1fcf683338d5d0b834cbd5ca5a8fca616fc2470571c955ff21c->enter($__internal_b27a51b6fa23e1fcf683338d5d0b834cbd5ca5a8fca616fc2470571c955ff21c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DashboardBundle:Dashboard:home.html.twig"));
+        $__internal_e47b47ceccf212204a2474ac775f9106a255b5ae6a4a1c6ea4573cd64900488e = $this->env->getExtension("native_profiler");
+        $__internal_e47b47ceccf212204a2474ac775f9106a255b5ae6a4a1c6ea4573cd64900488e->enter($__internal_e47b47ceccf212204a2474ac775f9106a255b5ae6a4a1c6ea4573cd64900488e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DashboardBundle:Dashboard:home.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_b27a51b6fa23e1fcf683338d5d0b834cbd5ca5a8fca616fc2470571c955ff21c->leave($__internal_b27a51b6fa23e1fcf683338d5d0b834cbd5ca5a8fca616fc2470571c955ff21c_prof);
+        $__internal_e47b47ceccf212204a2474ac775f9106a255b5ae6a4a1c6ea4573cd64900488e->leave($__internal_e47b47ceccf212204a2474ac775f9106a255b5ae6a4a1c6ea4573cd64900488e_prof);
 
     }
 
     // line 3
     public function block_pageTitle($context, array $blocks = array())
     {
-        $__internal_fb53eec75700701cd86e2a564ce08764da67ed735b3e474443c57f54f0ccdd5e = $this->env->getExtension("native_profiler");
-        $__internal_fb53eec75700701cd86e2a564ce08764da67ed735b3e474443c57f54f0ccdd5e->enter($__internal_fb53eec75700701cd86e2a564ce08764da67ed735b3e474443c57f54f0ccdd5e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "pageTitle"));
+        $__internal_018a9279180cae1a8af3f2ec0d1aa46ed20527259f739c527104517eeb4b25b0 = $this->env->getExtension("native_profiler");
+        $__internal_018a9279180cae1a8af3f2ec0d1aa46ed20527259f739c527104517eeb4b25b0->enter($__internal_018a9279180cae1a8af3f2ec0d1aa46ed20527259f739c527104517eeb4b25b0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "pageTitle"));
 
         // line 4
         echo "    <li>
-        <a href=\"index.html\">Dashboard</a>
-        <i class=\"fa fa-circle\"></i>
-    </li>
-    <li>
         <a href=\"";
-        // line 9
-        echo $this->env->getExtension('routing')->getPath("db_widget_list");
-        echo "\">Widgets</a>
-        <i class=\"fa fa-circle\"></i>
-    </li>
-    <li>
-        <a href=\"db_widget_see\">See</a>
+        // line 5
+        echo $this->env->getExtension('routing')->getPath("db_dashboard_list");
+        echo "\">Dashboard</a>
     </li>
 ";
         
-        $__internal_fb53eec75700701cd86e2a564ce08764da67ed735b3e474443c57f54f0ccdd5e->leave($__internal_fb53eec75700701cd86e2a564ce08764da67ed735b3e474443c57f54f0ccdd5e_prof);
+        $__internal_018a9279180cae1a8af3f2ec0d1aa46ed20527259f739c527104517eeb4b25b0->leave($__internal_018a9279180cae1a8af3f2ec0d1aa46ed20527259f739c527104517eeb4b25b0_prof);
 
     }
 
-    // line 17
+    // line 9
     public function block_body($context, array $blocks = array())
     {
-        $__internal_cffd5e3d80dbafd86d453b9ba0ff38361f6cb0d6a088cf2da8f005305b57d834 = $this->env->getExtension("native_profiler");
-        $__internal_cffd5e3d80dbafd86d453b9ba0ff38361f6cb0d6a088cf2da8f005305b57d834->enter($__internal_cffd5e3d80dbafd86d453b9ba0ff38361f6cb0d6a088cf2da8f005305b57d834_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_1801b1dcbfe20afd1170c2113b2f2c95ba760387be464c4a784a484cda718fbc = $this->env->getExtension("native_profiler");
+        $__internal_1801b1dcbfe20afd1170c2113b2f2c95ba760387be464c4a784a484cda718fbc->enter($__internal_1801b1dcbfe20afd1170c2113b2f2c95ba760387be464c4a784a484cda718fbc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 18
+        // line 10
         echo "    <div class=\"box box-primary\">
         <div class=\"box-header\">
         </div><!-- /.box-header -->
         <div class=\"box-body\">
-            <div id=\"linechart\" style=\"min-width: 400px; height: 400px; margin: 0 auto\"></div>
-
+            <div class=\"row\">
+                <div class=\"col-md-6\">
+                    <div id=\"widget1\" ></div>
+                </div>
+                <div class=\"col-md-6\">
+                    <div id=\"widget2\" ></div>
+                </div
+            </div>
         </div><!-- /.box-body -->
+    </div>
     </div>
 ";
         
-        $__internal_cffd5e3d80dbafd86d453b9ba0ff38361f6cb0d6a088cf2da8f005305b57d834->leave($__internal_cffd5e3d80dbafd86d453b9ba0ff38361f6cb0d6a088cf2da8f005305b57d834_prof);
+        $__internal_1801b1dcbfe20afd1170c2113b2f2c95ba760387be464c4a784a484cda718fbc->leave($__internal_1801b1dcbfe20afd1170c2113b2f2c95ba760387be464c4a784a484cda718fbc_prof);
 
     }
 
-    // line 29
+    // line 28
     public function block_script_javascripts($context, array $blocks = array())
     {
-        $__internal_4c2bef7690e309eba1f5845a8c951270c44ab1cc190afaa4662cd0d05d0a897f = $this->env->getExtension("native_profiler");
-        $__internal_4c2bef7690e309eba1f5845a8c951270c44ab1cc190afaa4662cd0d05d0a897f->enter($__internal_4c2bef7690e309eba1f5845a8c951270c44ab1cc190afaa4662cd0d05d0a897f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "script_javascripts"));
+        $__internal_5f4c7f9e7549a8c7befacd0119220ff6bfe9165a823106b73ae52f015cd72821 = $this->env->getExtension("native_profiler");
+        $__internal_5f4c7f9e7549a8c7befacd0119220ff6bfe9165a823106b73ae52f015cd72821->enter($__internal_5f4c7f9e7549a8c7befacd0119220ff6bfe9165a823106b73ae52f015cd72821_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "script_javascripts"));
 
-        // line 30
+        // line 29
         echo "    <!-- Load jQuery from Google's CDN if needed -->
 
-<script src=\"//code.highcharts.com/4.1.8/highcharts.js\"></script>
-<script src=\"//code.highcharts.com/4.1.8/modules/exporting.js\"></script>
-<script type=\"text/javascript\">
-    ";
-        // line 35
+    <script src=\"//code.highcharts.com/4.1.8/highcharts.js\"></script>
+    <script src=\"//code.highcharts.com/4.1.8/modules/exporting.js\"></script>
+    <script type=\"text/javascript\">
+        ";
+        // line 34
         echo $this->env->getExtension('highcharts_extension')->chart((isset($context["chart1"]) ? $context["chart1"] : $this->getContext($context, "chart1")));
         echo "
-</script>
-";
+    </script>
+    ";
+        // line 36
+        if (array_key_exists("chart2", $context)) {
+            // line 37
+            echo "    <script type=\"text/javascript\">
+        ";
+            // line 38
+            echo $this->env->getExtension('highcharts_extension')->chart((isset($context["chart2"]) ? $context["chart2"] : $this->getContext($context, "chart2")));
+            echo "
+    </script>
+    ";
+        }
         
-        $__internal_4c2bef7690e309eba1f5845a8c951270c44ab1cc190afaa4662cd0d05d0a897f->leave($__internal_4c2bef7690e309eba1f5845a8c951270c44ab1cc190afaa4662cd0d05d0a897f_prof);
+        $__internal_5f4c7f9e7549a8c7befacd0119220ff6bfe9165a823106b73ae52f015cd72821->leave($__internal_5f4c7f9e7549a8c7befacd0119220ff6bfe9165a823106b73ae52f015cd72821_prof);
 
     }
 
@@ -115,22 +125,14 @@ class __TwigTemplate_3685be3b802fa24cb34c11645f4734bc6e381cea370ea5ebb985b1483f8
 
     public function getDebugInfo()
     {
-        return array (  97 => 35,  90 => 30,  84 => 29,  69 => 18,  63 => 17,  49 => 9,  42 => 4,  36 => 3,  11 => 1,);
+        return array (  106 => 38,  103 => 37,  101 => 36,  96 => 34,  89 => 29,  83 => 28,  61 => 10,  55 => 9,  45 => 5,  42 => 4,  36 => 3,  11 => 1,);
     }
 }
 /* {% extends "::base.html.twig" %}*/
 /* */
 /* {% block pageTitle %}*/
 /*     <li>*/
-/*         <a href="index.html">Dashboard</a>*/
-/*         <i class="fa fa-circle"></i>*/
-/*     </li>*/
-/*     <li>*/
-/*         <a href="{{ path("db_widget_list") }}">Widgets</a>*/
-/*         <i class="fa fa-circle"></i>*/
-/*     </li>*/
-/*     <li>*/
-/*         <a href="db_widget_see">See</a>*/
+/*         <a href="{{ path("db_dashboard_list") }}">Dashboard</a>*/
 /*     </li>*/
 /* {% endblock %}*/
 /* */
@@ -139,9 +141,16 @@ class __TwigTemplate_3685be3b802fa24cb34c11645f4734bc6e381cea370ea5ebb985b1483f8
 /*         <div class="box-header">*/
 /*         </div><!-- /.box-header -->*/
 /*         <div class="box-body">*/
-/*             <div id="linechart" style="min-width: 400px; height: 400px; margin: 0 auto"></div>*/
-/* */
+/*             <div class="row">*/
+/*                 <div class="col-md-6">*/
+/*                     <div id="widget1" ></div>*/
+/*                 </div>*/
+/*                 <div class="col-md-6">*/
+/*                     <div id="widget2" ></div>*/
+/*                 </div*/
+/*             </div>*/
 /*         </div><!-- /.box-body -->*/
+/*     </div>*/
 /*     </div>*/
 /* {% endblock %}*/
 /* */
@@ -149,11 +158,16 @@ class __TwigTemplate_3685be3b802fa24cb34c11645f4734bc6e381cea370ea5ebb985b1483f8
 /* {% block script_javascripts %}*/
 /*     <!-- Load jQuery from Google's CDN if needed -->*/
 /* */
-/* <script src="//code.highcharts.com/4.1.8/highcharts.js"></script>*/
-/* <script src="//code.highcharts.com/4.1.8/modules/exporting.js"></script>*/
-/* <script type="text/javascript">*/
-/*     {{ chart(chart1) }}*/
-/* </script>*/
+/*     <script src="//code.highcharts.com/4.1.8/highcharts.js"></script>*/
+/*     <script src="//code.highcharts.com/4.1.8/modules/exporting.js"></script>*/
+/*     <script type="text/javascript">*/
+/*         {{ chart(chart1) }}*/
+/*     </script>*/
+/*     {% if chart2 is defined %}*/
+/*     <script type="text/javascript">*/
+/*         {{ chart(chart2) }}*/
+/*     </script>*/
+/*     {% endif %}*/
 /* {% endblock %} */
 /* */
 /* */

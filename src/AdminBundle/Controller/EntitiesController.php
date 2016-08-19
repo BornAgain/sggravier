@@ -35,6 +35,23 @@ class EntitiesController extends Controller
         ));
     }
     
+    /**
+     * @Route("/delete/{id}", requirements={"id" = "\d+"},name="ab_entities_delete")
+     */
+    public function deleteAction($id) {
+        $em = $this->getDoctrine()->getManager();
+        $entity = $em->getRepository("AdminBundle:Entities")->find($id);
+
+        if (!isset($entity) OR $entity->getId() == NULL) {
+            throw $this->createNotFoundException('ID Incorrect');
+        }
+
+        $em->remove($entity);
+        $em->flush();
+
+        return $this->redirect($this->generateUrl("ab_entities_list"));
+    }
+    
 
     /**
      * @Route("/list", name="ab_entities_list")

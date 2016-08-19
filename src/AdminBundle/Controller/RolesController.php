@@ -38,6 +38,23 @@ class RolesController extends Controller
     }
     
     /**
+     * @Route("/delete/{id}", requirements={"id" = "\d+"},name="ab_roles_delete")
+     */
+    public function deleteAction($id) {
+        $em = $this->getDoctrine()->getManager();
+        $entity = $em->getRepository("AdminBundle:Roles")->find($id);
+
+        if (!isset($entity) OR $entity->getId() == NULL) {
+            throw $this->createNotFoundException('ID Incorrect');
+        }
+
+        $em->remove($entity);
+        $em->flush();
+
+        return $this->redirect($this->generateUrl("ab_roles_list"));
+    }
+    
+    /**
      * @Route("/list",name="ab_roles_list")
      */
     public function listAction()
@@ -77,7 +94,7 @@ class RolesController extends Controller
             $em->flush();
             //$request->getSession()->getFlashBag()->add('notice', 'Annonce bien enregistrée.');
 
-            return $this->redirect($this->generateUrl('ab_roles_update'));
+            return $this->redirect($this->generateUrl('ab_roles_see', array('id' => $entity->getId())));
         }
 
         return $this->render('AdminBundle:Roles:update.html.twig', array(

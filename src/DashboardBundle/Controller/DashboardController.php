@@ -35,6 +35,24 @@ class DashboardController extends Controller {
                     'form' => $form->createView()
         ));
     }
+    
+    
+    /**
+     * @Route("/delete/{id}", requirements={"id" = "\d+"},name="db_dashboard_delete")
+     */
+    public function deleteAction($id) {
+        $em = $this->getDoctrine()->getManager();
+        $entity = $em->getRepository("DashboardBundle:Dashboard")->find($id);
+
+        if (!isset($entity) OR $entity->getId() == NULL) {
+            throw $this->createNotFoundException('ID Incorrect');
+        }
+
+        $em->remove($entity);
+        $em->flush();
+
+        return $this->redirect($this->generateUrl("db_dashboard_list"));
+    }
 
     /**
      * @Route("/home", name="db_dashboard_home")

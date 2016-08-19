@@ -8,11 +8,11 @@
         <i class="fa fa-circle"></i>
     </li>
     <li>
-        <a href="{{ path("ab_roles_list") }}">Entities</a>
+        <a href="{{ path("ab_roles_list") }}">Roles</a>
         <i class="fa fa-circle"></i>
     </li>
     <li>
-        <a href="ab_roles_see"><b>See</b></a>
+        <b>See</b>
     </li>
 {% endblock %}
 
@@ -25,10 +25,16 @@
                 <label for="country">Description</label>
                 <div class="form-control">{{ entity.description }}</div>    
             </div>
+            <div class="form-group">
+                <label for="country">Update date</label>
+                <div class="form-control">{{ entity.updateDate | date("Y-m-d H:i:s") }}</div>    
+            </div>
             
             
             <div class="box-footer pull-right">
                 <a href="{{ path ("ab_roles_update", {'id':entity.id})}}"> <input class="btn btn-success" type="submit" value="Update"/> </a>
+                <a href="{{ path ("ab_roles_delete", {'id':entity.id})}}"> <input class="btn btn-success" type="submit" value="Delete"/> </a>
+
             </div>
         </div><!-- /.box-body --> 
 {% endblock %}

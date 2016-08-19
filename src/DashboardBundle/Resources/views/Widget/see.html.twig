@@ -10,7 +10,7 @@
         <i class="fa fa-circle"></i>
     </li>
     <li>
-        <a href="db_widget_see"><b>See</b></a>
+        <b>See</b>
     </li>
 {% endblock %}
 
@@ -43,6 +43,8 @@
             
             <div class="box-footer pull-right">
                 <a href="{{ path ("db_widget_update", {'id':entity.id})}}"> <input class="btn btn-success" type="submit" value="Update"/> </a>
+                <a href="{{ path ("db_widget_delete", {'id':entity.id})}}"> <input class="btn btn-success" type="submit" value="Delete"/> </a>
+
             </div>
 
         </div><!-- /.box-body -->

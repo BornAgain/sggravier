@@ -41,6 +41,23 @@ class WidgetController extends Controller
     }
     
     /**
+     * @Route("/delete/{id}", requirements={"id" = "\d+"},name="db_widget_delete")
+     */
+    public function deleteAction($id) {
+        $em = $this->getDoctrine()->getManager();
+        $entity = $em->getRepository("DashboardBundle:Widget")->find($id);
+
+        if (!isset($entity) OR $entity->getId() == NULL) {
+            throw $this->createNotFoundException('ID Incorrect');
+        }
+
+        $em->remove($entity);
+        $em->flush();
+
+        return $this->redirect($this->generateUrl("db_widget_list"));
+    }
+    
+    /**
      * @Route("/list", name="db_widget_list")
      */
     public function listAction()

@@ -25,20 +25,20 @@ class __TwigTemplate_bc2e77fcb610bc45e7df9c94085b208ae4038d55e2f0841e1145f301041
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_1a3cd3879067bdcb77a74e4ef95318326a115987fbd396363190a5c24d16a447 = $this->env->getExtension("native_profiler");
-        $__internal_1a3cd3879067bdcb77a74e4ef95318326a115987fbd396363190a5c24d16a447->enter($__internal_1a3cd3879067bdcb77a74e4ef95318326a115987fbd396363190a5c24d16a447_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DashboardBundle:Dashboard:list.html.twig"));
+        $__internal_42d76f0436ef6d5d6fdef24596027eee745d636fe66550299d38e7c0336a6059 = $this->env->getExtension("native_profiler");
+        $__internal_42d76f0436ef6d5d6fdef24596027eee745d636fe66550299d38e7c0336a6059->enter($__internal_42d76f0436ef6d5d6fdef24596027eee745d636fe66550299d38e7c0336a6059_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DashboardBundle:Dashboard:list.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_1a3cd3879067bdcb77a74e4ef95318326a115987fbd396363190a5c24d16a447->leave($__internal_1a3cd3879067bdcb77a74e4ef95318326a115987fbd396363190a5c24d16a447_prof);
+        $__internal_42d76f0436ef6d5d6fdef24596027eee745d636fe66550299d38e7c0336a6059->leave($__internal_42d76f0436ef6d5d6fdef24596027eee745d636fe66550299d38e7c0336a6059_prof);
 
     }
 
     // line 3
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_ba5db5d7626ac2cc36a30f859616b65553d36aedfcb8816acb86952a1203fc8f = $this->env->getExtension("native_profiler");
-        $__internal_ba5db5d7626ac2cc36a30f859616b65553d36aedfcb8816acb86952a1203fc8f->enter($__internal_ba5db5d7626ac2cc36a30f859616b65553d36aedfcb8816acb86952a1203fc8f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_ee9fe0116b034f8026f6f21ce5f9830c86b3a5b948ddad35bacdd2318e559fd2 = $this->env->getExtension("native_profiler");
+        $__internal_ee9fe0116b034f8026f6f21ce5f9830c86b3a5b948ddad35bacdd2318e559fd2->enter($__internal_ee9fe0116b034f8026f6f21ce5f9830c86b3a5b948ddad35bacdd2318e559fd2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         echo "        
     <link href=\"";
@@ -52,123 +52,128 @@ class __TwigTemplate_bc2e77fcb610bc45e7df9c94085b208ae4038d55e2f0841e1145f301041
     
 ";
         
-        $__internal_ba5db5d7626ac2cc36a30f859616b65553d36aedfcb8816acb86952a1203fc8f->leave($__internal_ba5db5d7626ac2cc36a30f859616b65553d36aedfcb8816acb86952a1203fc8f_prof);
+        $__internal_ee9fe0116b034f8026f6f21ce5f9830c86b3a5b948ddad35bacdd2318e559fd2->leave($__internal_ee9fe0116b034f8026f6f21ce5f9830c86b3a5b948ddad35bacdd2318e559fd2_prof);
 
     }
 
     // line 9
     public function block_pageTitle($context, array $blocks = array())
     {
-        $__internal_53e4abebd5aa367040fadcf5d95312670ea4c682c92a9b7d01061e0a6b8e253e = $this->env->getExtension("native_profiler");
-        $__internal_53e4abebd5aa367040fadcf5d95312670ea4c682c92a9b7d01061e0a6b8e253e->enter($__internal_53e4abebd5aa367040fadcf5d95312670ea4c682c92a9b7d01061e0a6b8e253e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "pageTitle"));
+        $__internal_b7c0af0bfeaf05d7b6c9a4c6dad6479f4b4a2cd68f7a8e33f9535b28074b04ca = $this->env->getExtension("native_profiler");
+        $__internal_b7c0af0bfeaf05d7b6c9a4c6dad6479f4b4a2cd68f7a8e33f9535b28074b04ca->enter($__internal_b7c0af0bfeaf05d7b6c9a4c6dad6479f4b4a2cd68f7a8e33f9535b28074b04ca_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "pageTitle"));
 
         // line 10
         echo "    <li>
-        <a href=\"";
-        // line 11
-        echo $this->env->getExtension('routing')->getPath("db_dashboard_list");
-        echo "\"><b>Dashboards</b></a>
+        <b>Dashboards</b>
     </li>
 ";
         
-        $__internal_53e4abebd5aa367040fadcf5d95312670ea4c682c92a9b7d01061e0a6b8e253e->leave($__internal_53e4abebd5aa367040fadcf5d95312670ea4c682c92a9b7d01061e0a6b8e253e_prof);
+        $__internal_b7c0af0bfeaf05d7b6c9a4c6dad6479f4b4a2cd68f7a8e33f9535b28074b04ca->leave($__internal_b7c0af0bfeaf05d7b6c9a4c6dad6479f4b4a2cd68f7a8e33f9535b28074b04ca_prof);
 
     }
 
     // line 16
     public function block_body($context, array $blocks = array())
     {
-        $__internal_b2ab0eab596d5ae41d08ee887ac7ecf702d1b8ba37cb5d68558390a7fb72a098 = $this->env->getExtension("native_profiler");
-        $__internal_b2ab0eab596d5ae41d08ee887ac7ecf702d1b8ba37cb5d68558390a7fb72a098->enter($__internal_b2ab0eab596d5ae41d08ee887ac7ecf702d1b8ba37cb5d68558390a7fb72a098_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_75af080822c4e13de6958dbb3814227dfbb5d581347f8697b3f206786a420566 = $this->env->getExtension("native_profiler");
+        $__internal_75af080822c4e13de6958dbb3814227dfbb5d581347f8697b3f206786a420566->enter($__internal_75af080822c4e13de6958dbb3814227dfbb5d581347f8697b3f206786a420566_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 17
-        echo "            
+        echo "    
+    <div class=\"box-footer pull-right\" style=\"border-bottom: 15px\">
+        <a href=\"";
+        // line 19
+        echo $this->env->getExtension('routing')->getPath("db_dashboard_add");
+        echo "\"> <input class=\"btn btn-success\" type=\"submit\" value=\"Add\"/> </a>
+    </div>
+    <br/>
+            
     <table class=\"table table-striped table-bordered table-hover table-header-fixed\" id=\"sample_1\">
         <thead>
             <tr class=\"table table-striped table-bordered table-hover table-header-fixed \" id=\"sample_1\">
                 <th>Name</th>
+                <th>Update Date</th>
             </tr>
         </thead>
         <tbody>
             ";
-        // line 25
+        // line 31
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["entities"]) ? $context["entities"] : $this->getContext($context, "entities")));
         foreach ($context['_seq'] as $context["_key"] => $context["entity"]) {
-            // line 26
+            // line 32
             echo "                <tr>
                     <td><a href=\"";
-            // line 27
+            // line 33
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("db_dashboard_see", array("id" => $this->getAttribute($context["entity"], "id", array()))), "html", null, true);
             echo "\"title=\"view\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["entity"], "Name", array()), "html", null, true);
             echo "</a></td>
+                    <td>";
+            // line 34
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["entity"], "updateDate", array()), "Y-m-d H:i:s"), "html", null, true);
+            echo "</td>
                 </tr>
             ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['entity'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 30
+        // line 37
         echo "        </tbody>
     </table>
         
-    <div class=\"box-footer pull-right\">
-        <a href=\"";
-        // line 34
-        echo $this->env->getExtension('routing')->getPath("db_dashboard_add");
-        echo "\"> <input class=\"btn btn-success\" type=\"submit\" value=\"Add\"/> </a>
-    </div>
+    
     
 ";
         
-        $__internal_b2ab0eab596d5ae41d08ee887ac7ecf702d1b8ba37cb5d68558390a7fb72a098->leave($__internal_b2ab0eab596d5ae41d08ee887ac7ecf702d1b8ba37cb5d68558390a7fb72a098_prof);
+        $__internal_75af080822c4e13de6958dbb3814227dfbb5d581347f8697b3f206786a420566->leave($__internal_75af080822c4e13de6958dbb3814227dfbb5d581347f8697b3f206786a420566_prof);
 
     }
 
-    // line 39
+    // line 44
     public function block_plg_javascripts($context, array $blocks = array())
     {
-        $__internal_44fe7e7da59af10059dd6d248634f3c4d26c217578f13ce893f50c76bba21314 = $this->env->getExtension("native_profiler");
-        $__internal_44fe7e7da59af10059dd6d248634f3c4d26c217578f13ce893f50c76bba21314->enter($__internal_44fe7e7da59af10059dd6d248634f3c4d26c217578f13ce893f50c76bba21314_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "plg_javascripts"));
+        $__internal_5b90265a5a81fa2d7f0d8cb5957a94d7d91073d7fcb0c20c037251daa30a25a6 = $this->env->getExtension("native_profiler");
+        $__internal_5b90265a5a81fa2d7f0d8cb5957a94d7d91073d7fcb0c20c037251daa30a25a6->enter($__internal_5b90265a5a81fa2d7f0d8cb5957a94d7d91073d7fcb0c20c037251daa30a25a6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "plg_javascripts"));
 
-        // line 40
+        // line 45
         echo "    <!-- BEGIN PAGE LEVEL PLUGINS -->
     <script src=\"";
-        // line 41
+        // line 46
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/global/scripts/datatable.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
     <script src=\"";
-        // line 42
+        // line 47
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/global/plugins/datatables/datatables.min.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
     <script src=\"";
-        // line 43
+        // line 48
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
     <!-- END PAGE LEVEL PLUGINS -->
 ";
         
-        $__internal_44fe7e7da59af10059dd6d248634f3c4d26c217578f13ce893f50c76bba21314->leave($__internal_44fe7e7da59af10059dd6d248634f3c4d26c217578f13ce893f50c76bba21314_prof);
+        $__internal_5b90265a5a81fa2d7f0d8cb5957a94d7d91073d7fcb0c20c037251daa30a25a6->leave($__internal_5b90265a5a81fa2d7f0d8cb5957a94d7d91073d7fcb0c20c037251daa30a25a6_prof);
 
     }
 
-    // line 47
+    // line 52
     public function block_script_javascripts($context, array $blocks = array())
     {
-        $__internal_543d1a5717f45adfaa874eb457e7a17982fa41fc0302df92ae44de6d541a5354 = $this->env->getExtension("native_profiler");
-        $__internal_543d1a5717f45adfaa874eb457e7a17982fa41fc0302df92ae44de6d541a5354->enter($__internal_543d1a5717f45adfaa874eb457e7a17982fa41fc0302df92ae44de6d541a5354_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "script_javascripts"));
+        $__internal_69f657575496798e6493aee587709a7af4fe3d5ff12e2dc1e1fbd6ac374bb45b = $this->env->getExtension("native_profiler");
+        $__internal_69f657575496798e6493aee587709a7af4fe3d5ff12e2dc1e1fbd6ac374bb45b->enter($__internal_69f657575496798e6493aee587709a7af4fe3d5ff12e2dc1e1fbd6ac374bb45b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "script_javascripts"));
 
-        // line 48
+        // line 53
         echo "    <!-- BEGIN PAGE LEVEL PLUGINS -->
     <script src=\"";
-        // line 49
+        // line 54
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/pages/scripts/table-datatables-fixedheader.min.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script> 
     <!-- END PAGE LEVEL PLUGINS -->
 ";
         
-        $__internal_543d1a5717f45adfaa874eb457e7a17982fa41fc0302df92ae44de6d541a5354->leave($__internal_543d1a5717f45adfaa874eb457e7a17982fa41fc0302df92ae44de6d541a5354_prof);
+        $__internal_69f657575496798e6493aee587709a7af4fe3d5ff12e2dc1e1fbd6ac374bb45b->leave($__internal_69f657575496798e6493aee587709a7af4fe3d5ff12e2dc1e1fbd6ac374bb45b_prof);
 
     }
 
@@ -184,7 +189,7 @@ class __TwigTemplate_bc2e77fcb610bc45e7df9c94085b208ae4038d55e2f0841e1145f301041
 
     public function getDebugInfo()
     {
-        return array (  166 => 49,  163 => 48,  157 => 47,  147 => 43,  143 => 42,  139 => 41,  136 => 40,  130 => 39,  119 => 34,  113 => 30,  102 => 27,  99 => 26,  95 => 25,  85 => 17,  79 => 16,  69 => 11,  66 => 10,  60 => 9,  50 => 5,  46 => 4,  38 => 3,  11 => 1,);
+        return array (  171 => 54,  168 => 53,  162 => 52,  152 => 48,  148 => 47,  144 => 46,  141 => 45,  135 => 44,  123 => 37,  114 => 34,  108 => 33,  105 => 32,  101 => 31,  86 => 19,  82 => 17,  76 => 16,  66 => 10,  60 => 9,  50 => 5,  46 => 4,  38 => 3,  11 => 1,);
     }
 }
 /* {% extends "::base.html.twig" %}*/
@@ -197,31 +202,36 @@ class __TwigTemplate_bc2e77fcb610bc45e7df9c94085b208ae4038d55e2f0841e1145f301041
 /* */
 /* {% block pageTitle %}*/
 /*     <li>*/
-/*         <a href="{{ path("db_dashboard_list") }}"><b>Dashboards</b></a>*/
+/*         <b>Dashboards</b>*/
 /*     </li>*/
 /* {% endblock %}*/
 /* */
 /* */
 /* {% block body %}*/
+/*     */
+/*     <div class="box-footer pull-right" style="border-bottom: 15px">*/
+/*         <a href="{{ path ("db_dashboard_add")}}"> <input class="btn btn-success" type="submit" value="Add"/> </a>*/
+/*     </div>*/
+/*     <br/>*/
 /*             */
 /*     <table class="table table-striped table-bordered table-hover table-header-fixed" id="sample_1">*/
 /*         <thead>*/
 /*             <tr class="table table-striped table-bordered table-hover table-header-fixed " id="sample_1">*/
 /*                 <th>Name</th>*/
+/*                 <th>Update Date</th>*/
 /*             </tr>*/
 /*         </thead>*/
 /*         <tbody>*/
 /*             {% for entity in entities %}*/
 /*                 <tr>*/
 /*                     <td><a href="{{ path("db_dashboard_see",{'id':entity.id}) }}"title="view">{{ entity.Name }}</a></td>*/
+/*                     <td>{{ entity.updateDate | date("Y-m-d H:i:s")}}</td>*/
 /*                 </tr>*/
 /*             {% endfor %}*/
 /*         </tbody>*/
 /*     </table>*/
 /*         */
-/*     <div class="box-footer pull-right">*/
-/*         <a href="{{ path ("db_dashboard_add")}}"> <input class="btn btn-success" type="submit" value="Add"/> </a>*/
-/*     </div>*/
+/*     */
 /*     */
 /* {% endblock %}*/
 /* */

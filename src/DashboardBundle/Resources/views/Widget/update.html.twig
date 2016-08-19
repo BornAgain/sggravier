@@ -10,7 +10,7 @@
         <i class="fa fa-circle"></i>
     </li>
     <li>
-        <a href="db_widget_update"><b>Update</b></a>
+        <b>Update</b>
     </li>
 {% endblock %}
 
@@ -20,27 +20,35 @@
         <div class="box-header"> </div><!-- /.box-header -->
         <!-- form start -->
         {{ form_start(form, {'method': 'POST'}) }}
-        <div class="box-body row">
-            <div class="form-group col-md-12">
+        <div class="box-body row">                        
+            <div class="form-group col-md-6">
+                <label for="widget_type_name">{{ form_label(form.name) }}</label>
+                {{ form_widget(form.name, {'attr': {'tabindex' : '1','id' : 'widget_type_id','class': 'form-control','placeholder': 'Widget name'}}) }}
+            </div> 
+            <div class="form-group col-md-6">
                 <label for="widget_type_id">{{ form_label(form.type) }}</label>
                 {{ form_widget(form.type, {'attr': {'tabindex' : '1','id' : 'widget_type_id','class': 'form-control','placeholder': 'Widget type'}}) }}
             </div>  
-            <div class="form-group col-md-12">
+            <div class="form-group col-md-6">
                 <label for="widget_position_id">{{ form_label(form.position) }}</label>
                 {{ form_widget(form.position, {'attr': {'tabindex' : '1','id' : 'widget_position_id','class': 'form-control','placeholder': 'Widget position'}}) }}
             </div>
-            <div class="form-group col-md-12">
+            <div class="form-group col-md-6">
                 <label for="widget_query_id">{{ form_label(form.query) }}</label>
                 {{ form_widget(form.query, {'attr': {'tabindex' : '1','id' : 'widget_query_id','class': 'form-control','placeholder': 'Query'}}) }}
             </div>
+            <div class="form-group col-md-12">
+                <label for="multiple" class="control-label">Dashboard</label>
+                {{ form_widget(form.dashboard, {'attr': {'tabindex' : '1','id' : 'widget_position_id','class': 'form-control','placeholder': 'Widget position'}}) }}
+            </div>            
         </div>
-        
+
         <div class="box-footer pull-right">
             <a href="{{ path ("db_widget_list")}}"> <input class="btn btn-success" type="submit" value="Save"/> </a>
         </div>
         {{ form_end(form) }}
     </div>
-    
+
 {% endblock %}
 
 

@@ -232,4 +232,48 @@ class Roles extends \AdminBundle\Entity\Roles implements \Doctrine\ORM\Proxy\Pro
         return parent::getEnabled();
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    public function setCreateDate($createDate)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCreateDate', array($createDate));
+
+        return parent::setCreateDate($createDate);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getCreateDate()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCreateDate', array());
+
+        return parent::getCreateDate();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setUpdateDate($updateDate)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setUpdateDate', array($updateDate));
+
+        return parent::setUpdateDate($updateDate);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getUpdateDate()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUpdateDate', array());
+
+        return parent::getUpdateDate();
+    }
+
 }

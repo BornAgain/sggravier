@@ -18,7 +18,8 @@ use Doctrine\ORM\Mapping as ORM;
 class Dashboard
 {
     /**
-    * @ORM\OneToMany(targetEntity="DashboardBundle\Entity\Widget", mappedBy="dashboard")
+    * @ORM\OneToMany(targetEntity="DashboardBundle\Entity\Widget", mappedBy="dashboard", cascade={"remove","persist"} )
+    * @ORM\JoinColumn(nullable=false)
     */
     private $widget;
   

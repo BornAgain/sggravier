@@ -6,6 +6,8 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 
@@ -28,7 +30,7 @@ class WidgetType extends AbstractType {
                     'label'=> 'Type'
                 ))
                 ->add('query')
-                ->add('position')
+                ->add('position',IntegerType::class)
                 ->add('dashboard', 'entity', array(
                     'class' => 'DashboardBundle:Dashboard',
                     'property' => 'name',))

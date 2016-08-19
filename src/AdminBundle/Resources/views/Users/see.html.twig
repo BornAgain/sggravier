@@ -13,7 +13,7 @@
         <i class="fa fa-circle"></i>
     </li>
     <li>
-        <a href="ab_users_see"><b>See</b></a>
+        <b>See</b>
     </li>
 {% endblock %}
 
@@ -48,7 +48,9 @@
             </div>
 
             <div class="box-footer pull-right">
-                <a href="{{ path ("ab_users_see", {'id':entity.id})}}"> <input class="btn btn-success" type="submit" value="Update"/> </a>
+                <a href="{{ path ("ab_users_update", {'id':entity.id})}}"> <input class="btn btn-success" type="submit" value="Update"/> </a>
+                <a href="{{ path ("ab_users_delete", {'id':entity.id})}}"> <input class="btn btn-success" type="submit" value="Delete"/> </a>
+
             </div>
 
         </div><!-- /.box-body -->

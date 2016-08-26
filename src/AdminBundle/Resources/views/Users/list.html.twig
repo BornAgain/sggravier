@@ -30,6 +30,7 @@
                 <th>Id</th>
                 <th>FirstName</th>
                 <th>LastName</th>
+                <th>Update date</th>
             </tr>
         </thead>
         <tbody>
@@ -38,6 +39,7 @@
                     <td><a href="{{ path("ab_users_see",{'id':entity.id}) }}"title="view">{{ entity.UserName }}</a></td>
                     <td>{{ entity.FirstName }}</td>
                     <td>{{ entity.LastName}}</td>
+                    <td>{{ entity.updateDate | date('Y-m-d H:i:s')}}</td>
                 </tr>
             {% endfor %}
         </tbody>

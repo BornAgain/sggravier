@@ -1,0 +1,45 @@
+{% extends '::base.html.twig' %}
+
+{% block titlePage %}
+    {#DATASOURCE <small>Wizard</small>#}
+{% endblock %}
+
+{% block stylesheets %}        
+    <link href="{{ asset('assets/global/plugins/select2/css/select2.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/global/plugins/select2/css/select2-bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+
+{% block body %}
+  <!-- BEGIN CONTENT BODY -->
+                    <div class="row">
+                        <div class="col-md-12">                            
+                            <div class="portlet light bordered" id="form_wizard_1">                                
+                                <div class="portlet-body form">
+                                    {{ form(form) }}  
+                                   
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!-- END CONTENT BODY -->
+{% endblock %}
+
+
+{% block plg_javascripts %}
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    <script src="{{ asset('assets/global/plugins/select2/js/select2.full.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('assets/global/plugins/jquery-validation/js/jquery.validate.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('assets/global/plugins/jquery-validation/js/additional-methods.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('assets/global/plugins/bootstrap-wizard/jquery.bootstrap.wizard.min.js') }}" type="text/javascript"></script>
+    <!-- END PAGE LEVEL PLUGINS -->
+{% endblock %}
+
+{% block script_javascripts %}
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    {#<script src="{{ asset('assets/pages/scripts/form-wizard.min.js') }}" type="text/javascript"></script>    #}
+    <!-- END PAGE LEVEL PLUGINS -->
+{% endblock %} 
+
+

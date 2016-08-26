@@ -56,7 +56,21 @@ class Widget
      *
      * @ORM\Column(name="Position", type="integer")
      */
+    
     private $position;
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="Creation_Date", type="datetime")
+     */
+    private $creationDate;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="Update_Date", type="datetime")
+     */
+    private $updateDate;
     
    /**
    * @ORM\ManyToOne(targetEntity="DashboardBundle\Entity\Dashboard")
@@ -141,7 +155,51 @@ class Widget
         return $this->position;
     }
     
+/**
+     * Set creationDate
+     *
+     * @param \DateTime $creationDate
+     * @return Widget
+     */
+    public function setCreationDate($creationDate)
+    {
+        $this->creationDate = $creationDate;
 
+        return $this;
+    }
+
+    /**
+     * Get creationDate
+     *
+     * @return \DateTime 
+     */
+    public function getCreationDate()
+    {
+        return $this->creationDate;
+    }
+
+    /**
+     * Set updateDate
+     *
+     * @param \DateTime $updateDate
+     * @return Widget
+     */
+    public function setUpdateDate($updateDate)
+    {
+        $this->updateDate = $updateDate;
+
+        return $this;
+    }
+
+    /**
+     * Get updateDate
+     *
+     * @return \DateTime 
+     */
+    public function getUpdateDate()
+    {
+        return $this->updateDate;
+    }
 
     /**
      * Set dashboard

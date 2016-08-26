@@ -12,12 +12,17 @@
         <i class="fa fa-circle"></i>
     </li>
     <li>
-        <a href="{{ path("cb_cubes_list") }}"><b>Cubes</b></a>
+        <b>Cubes</b>
     </li>
 {% endblock %}
 
 
 {% block body %}
+    
+    <div class="box-footer">
+        <a href="{{ path ("cb_cubes_add")}}"> <input class="btn btn-success" type="submit" style="border-bottom: 15px" value="Add"/> </a>
+    </div>
+    <br/>
             
     <table class="table table-striped table-bordered table-hover table-header-fixed" id="sample_1">
         <thead>
@@ -26,6 +31,7 @@
                 <th>Loc_Contract</th>
                 <th>ACCT_DATE</th>
                 <th>AMT_LCY</th>
+                <th>Update date</th>
             </tr>
         </thead>
         <tbody>
@@ -35,12 +41,12 @@
                     <td>{{ entity.locContract }}</td>
                     <td>{{ entity.aCCTDATE | date("Y-m-d H:i:s ")}}</td>
                     <td>{{ entity.aMTLCY}}</td>
+                    <td>{{ entity.updateDate | date("Y-m-d H:i:s ")}}</td>
                 </tr>
             {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path ("cb_cubes_add")}}"> <input class="btn btn-success" type="submit" value="Add"/> </a>
     
 {% endblock %}
 

@@ -55,12 +55,29 @@ class Datasource {
      * @ORM\Column(name="enabled", type="boolean")
      */
     private $enabled;
-
+    
+    /**
+     * @var bool
+     *
+     * @ORM\Column(name="notbuild", type="boolean")
+     */
+    private $notBuild;
+    
+    
+    
     /**
      * @ORM\OneToMany(targetEntity="DataSourceBundle\Entity\DatasourceDetail", mappedBy="datasource")
      */
     private $datasourcesDetails;
 
+    
+    /**
+     * @ORM\OneToMany(targetEntity="DataSourceBundle\Entity\File", mappedBy="datasource", cascade={"remove", "persist"})
+     * 
+     */
+    protected $files;
+    
+    
     /**
      * Get id
      *
@@ -141,6 +158,7 @@ class Datasource {
      */
     public function __construct() {
         $this->DatasourceDetails = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->setNotBuild(false);
     }
 
     /**
@@ -248,5 +266,65 @@ class Datasource {
     public function getDatasourcesDetails()
     {
         return $this->datasourcesDetails;
+    }
+
+    /**
+     * Set notBuild
+     *
+     * @param boolean $notBuild
+     *
+     * @return Datasource
+     */
+    public function setNotBuild($notBuild)
+    {
+        $this->notBuild = $notBuild;
+
+        return $this;
+    }
+
+    /**
+     * Get notBuild
+     *
+     * @return boolean
+     */
+    public function getNotBuild()
+    {
+        return $this->notBuild;
+    }
+
+    /**
+     * Add file
+     *
+     * @param \DataSourceBundle\Entity\File $file
+     *
+     * @return Datasource
+     */
+    public function addFile(\DataSourceBundle\Entity\File $file)
+    {
+        $file->setDatasource($this);
+        $this->files[] = $file;
+
+        return $this;
+    }
+
+    /**
+     * Remove file
+     *
+     * @param \DataSourceBundle\Entity\File $file
+     */
+    public function removeFile(\DataSourceBundle\Entity\File $file)
+    {
+        $file->setDatasource(null);
+        $this->files->removeElement($file);
+    }
+
+    /**
+     * Get files
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getFiles()
+    {
+        return $this->files;
     }
 }

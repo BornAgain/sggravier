@@ -51,8 +51,8 @@
             <div class="form-group col-md-12 ">
                 <label for="multiple" class="control-label">Roles</label>
                 <select id="multiple" class="form-control select2-multiple" multiple>
-                    <option value="AK">Alaska</option>
-                    <option value="HI" disabled="disabled">Hawaii</option>
+                    <option value="AK">User</option>
+                    <option value="HI" disabled="disabled">Admin</option>
                 </select>
             </div>
         </div>
@@ -60,6 +60,8 @@
 
         <div class="box-footer pull-right">
                 <a href="{{ path ("ab_users_list")}}"> <input class="btn btn-success" type="submit" value="Save"/> </a>
+                <a href="{{ path ("ab_roles_list")}}"> <input class="btn btn-success" type="submit" value="Cancel"/> </a>
+
         </div>
     </div><!-- /.box -->
 {% endblock %}

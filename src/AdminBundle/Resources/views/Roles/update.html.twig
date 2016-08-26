@@ -23,7 +23,7 @@
         <!-- form start -->
         {{ form_start(form, {'method': 'POST'}) }}
             <div class="box-body">
-                <div class="form-group">
+                <div class="form-group col-md-6">
                     <label for="name">{{ form_label(form.description) }}</label>
                     {{ form_widget(form.description, {'attr': {'class': 'form-control','placeholder': 'Institution Name'}}) }}
                 </div>
@@ -35,6 +35,8 @@
 
             <div class="box-footer pull-right">
                 <a href="{{ path ("ab_roles_list")}}"> <input class="btn btn-success" type="submit" value="Save"/> </a>
+                <a href="{{ path ("ab_roles_list")}}"> <input class="btn btn-success" type="submit" value="Cancel"/> </a>
+
             </div>
         {{ form_end(form) }}
     </div><!-- /.box -->

@@ -18,7 +18,7 @@
         <div class="box-header"></div><!-- /.box-header -->
         {{ form_start(form, {'method': 'POST'}) }}
         <div class="box-body row">
-            <div class="form-group">
+            <div class="form-group col-md-6">
                 <label for="dashboard_name_id">{{ form_label(form.name) }}</label>
                 {{ form_widget(form.name, {'attr': {'id' : 'dashboard_name_id','class': 'form-control','placeholder': 'Dashboard Name'}}) }}
             </div>                
@@ -26,6 +26,8 @@
 
         <div class="box-footer pull-right">
             <a href="{{ path ("db_dashboard_list")}}"> <input class="btn btn-success" type="submit" value="Save"/> </a>
+            <a href="{{ path ("db_dashboard_list")}}"> <input class="btn btn-success" type="submit" value="Cancel"/> </a>
+
         </div>
         {{ form_end(form) }}
     </div>

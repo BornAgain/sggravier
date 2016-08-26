@@ -19,6 +19,9 @@ class DefaultController extends Controller {
 
         $em2 = $this->getDoctrine()->getManager();
         $entity = $em2->getRepository("DashboardBundle:Dashboard")->find(1);
+        if($entity === null){
+            return $this->redirect($this->generateUrl("db_dashboard_add"));
+        }
         foreach ($entity->getWidget() as $key => $widget) {
 
             $em = $this->getDoctrine()->getEntityManager();

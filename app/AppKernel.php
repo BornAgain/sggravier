@@ -22,6 +22,8 @@ class AppKernel extends Kernel
             new CubesBundle\CubesBundle(),
             new DashboardBundle\DashboardBundle(),
             new Ob\HighchartsBundle\ObHighchartsBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
+            
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

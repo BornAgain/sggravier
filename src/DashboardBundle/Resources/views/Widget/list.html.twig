@@ -19,7 +19,7 @@
 
 {% block body %}
     
-    <div class="box-footer pull-right" style="border-bottom: 15px">
+    <div class="box-footert" style="border-bottom: 15px">
         <a href="{{ path ("db_widget_add")}}"> <input class="btn btn-success" type="submit" value="Add"/> </a>
     </div>
     <br/>
@@ -31,7 +31,7 @@
                 <th>Type</th>
                 <th>Position</th>
                 <th>Dashboard</th>
-                
+                <th>Update date</th>
             </tr>
         </thead>
         <tbody>
@@ -41,6 +41,7 @@
                     <td>{{ entity.type }}</td>
                     <td>{{ entity.position }}</td>
                     <td>{{ entity.dashboard.name }}</td>
+                    <td>{{ entity.updateDate | date('Y-m-d H:m:s')}}</td>
                 </tr>
             {% endfor %}
         </tbody>

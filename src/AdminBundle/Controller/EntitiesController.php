@@ -97,7 +97,7 @@ class EntitiesController extends Controller
             $em->flush();
             //$request->getSession()->getFlashBag()->add('notice', 'Annonce bien enregistrée.');
 
-            return $this->redirect($this->generateUrl('ab_entities_update', array('id' => $entity->getId())));
+            return $this->redirect($this->generateUrl('ab_entities_see', array('id' => $entity->getId())));
         }
 
         return $this->render('AdminBundle:Entities:update.html.twig', array(

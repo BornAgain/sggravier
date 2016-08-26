@@ -1,4 +1,6 @@
-{% extends "::base.html.twig" %}
+{% extends "::layout.html.twig" %}
+
+{% trans_default_domain 'FOSUserBundle' %}
 
 {% block pageTitle %}
     <li>
@@ -9,22 +11,86 @@
         <a href="{{ path("ab_security_login") }}">Security</a>
     </li>
 {% endblock %}
-{% block body %}
-    {% if error %}
-        <div class="alert alert-danger">{{ error.message }}</div>
-    {% endif %}
-    
-    <form action="{{ path('login_check') }}" method="post">
-        <label for="username">Login :</label>
-        <input type="text" id="username" name="_username" value="{{ last_username }}" />
-        
-        <label for="password">Password: </label>
-        <input type="password" id="password" name="_password"/>
-        <br/>
-        
-        <div class="box-footer pull-left">
-            <a href="{{ path ("ab_users_list")}}"> <input class="btn btn-success" type="submit" value="Connexion"/> </a>
+{% block fos_user_content %}
+    <!-- BEGIN : LOGIN PAGE 5-2 -->
+    <div class="user-login-5">
+        <div class="row bs-reset">
+            <div class="col-md-6 login-container bs-reset">
+{#                <img class="login-logo login-6" src="{{ asset('assets/pages/img/login/login-invert2_.png')}}" alt="SIGMAREPORTS" />#}
+                <h1 class="text-center">SIGMAREPORTS</h1>
+                <div class="login-content">
+{#                    <h1>SIGMAREPORTS</h1>#}
+                    <p> SIGMAREPORTS<sup>TM</sup> provides Banks a simple and easy way to use a secure Reporting platform fully integrated with T24<sup>TM</sup>. With more than 40 standard built in reports that include regulatory, forex MIS aspects and charts. The solution works with our JBloaderTM tool that provides the extraction of data. </p>
+                    {% if error %}
+                        <div class="alert alert-danger" role="alert">
+                            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                            <span class="sr-only">Error:</span>
+                            {{ error.messageKey|trans(error.messageData, 'security') }}
+                        </div>
+                    {% endif %}
+                    <form action="{{ path("fos_user_security_check") }}" method="POST" class="login-form" style="margin-top: 0px;" >
+                        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}"/>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <input type="text" placeholder="{{ 'security.login.username'|trans }}" class="form-control login-username" id="login-username" name="_username" /> </div>
+                            <div class="col-xs-6">
+                                <input type="password" placeholder="{{ 'security.login.password'|trans }}" class="form-control login-password" id="login-password" name="_password" /> </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="rem-password">
+                                    <p>{{ 'security.login.remember_me'|trans }}
+                                        <input type="checkbox" class="rem-checkbox"  id="remember_me" name="_remember_me" value="on" />
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-8 text-right">
+                                <div class="forgot-password">
+                                    <a href="javascript:;">Forgot Password?</a>
+                                </div>
+                                <button name="_submit" class="btn blue" type="submit">{{ 'security.login.submit'|trans }}</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="login-footer">
+                    <div class="row bs-reset">
+                        <!-- <div class="col-xs-4 bs-reset">
+                            <ul class="login-social">
+                                <li>
+                                    <a href="javascript:;">
+                                        <i class="icon-social-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <i class="icon-social-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <i class="icon-social-dribbble"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>-->
+                        <div class="col-xs-offset-4 col-xs-8 bs-reset">
+                            <div class="login-copyright text-right">
+                                <p>Copyright &copy; ITSS</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 bs-reset">
+                <div class="login-bg"> </div>
+            </div>
         </div>
-    </form>
-        
+    </div>
+    <!-- END : LOGIN PAGE 5-2 -->
+    <!--[if lt IE 9]>
+<script src="../assets/global/plugins/respond.min.js"></script>
+<script src="../assets/global/plugins/excanvas.min.js"></script> 
+<![endif]-->
+
 {% endblock %}

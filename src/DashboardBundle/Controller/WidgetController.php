@@ -26,7 +26,8 @@ class WidgetController extends Controller
         $form = $this->get('form.factory')->create(new \DashboardBundle\Form\WidgetType, $entity);
 
         if ($form->handleRequest($request)->isValid()) {
-            
+            $entity->setupdateDate(new \DateTime());
+            $entity->setCreationDate(new \DateTime());
             $em = $this->getDoctrine()->getManager();
             $em->persist($entity);
             $em->flush();
@@ -96,7 +97,7 @@ class WidgetController extends Controller
             $em->persist($entity);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('db_widget_list', array('id' => $entity->getId())));
+            return $this->redirect($this->generateUrl('db_widget_see', array('id' => $entity->getId())));
         }
 
         return $this->render('DashboardBundle:Widget:update.html.twig', array(

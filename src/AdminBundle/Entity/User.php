@@ -2,8 +2,9 @@
 
 namespace AdminBundle\Entity;
 
-use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
+use FOS\UserBundle\Model\User as BaseUser;
 
 /**
  * User
@@ -23,13 +24,4 @@ class User extends BaseUser {
     protected $id;
 
    
-    /**
-     * Get id
-     *
-     * @return int
-     */
-    public function getId() {
-        return $this->id;
-    }
-
 }

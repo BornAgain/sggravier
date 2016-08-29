@@ -359,13 +359,13 @@ License: You must have a valid license purchased only from themeforest(the above
                     <li class="dropdown dropdown-user">
                         <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                             <img alt="" class="img-circle" src="{{ asset('assets/layouts/layout/img/useravatar.png') }}" />
-                            <span class="username username-hide-on-mobile"> User </span>
+                            <span class="username username-hide-on-mobile"> {{ app.user.username|default('Anonymous') }} </span>
                             <i class="fa fa-angle-down"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-default">
                             <li>
                                 <a href="#">
-                                    <i class="icon-user"></i> My Profile </a>
+                                    <i class="icon-user"></i> {{ 'MY_PROFIL' | trans}} </a>
                             </li>
                         <!--
                             <li>
@@ -392,11 +392,11 @@ License: You must have a valid license purchased only from themeforest(the above
                         -->
                             <li>
                                 <a href="#">
-                                    <i class="icon-book-open"></i> Help </a>
+                                    <i class="icon-book-open"></i> {{ 'HELP' | trans}} </a>
                             </li>
                             <li>
-                                <a href="{{ url('fos_user_security_logout')}}">
-                                    <i class="icon-key"></i> Log Out </a>
+                                <a href="{{ url('fos_user_security_logout') }}">
+                                    <i class="icon-key"></i> {{ 'LOGOUT' | trans}} </a>
                             </li>     
                         </ul>
                     </li>
@@ -444,29 +444,29 @@ License: You must have a valid license purchased only from themeforest(the above
                     <li class="nav-item start active">
                                 <a href="{{ path("dh_dashboard") }}" class="nav-link ">
                                     <i class="icon-home"></i>
-                                    <span class="title">Dashboard</span>
+                                    <span class="title">{{'Dashboard' | trans }}</span>
                                     <span class="selected"></span>
                                 </a>                                  
                             </li>
                     <li class="heading">
-                        <h3 class="uppercase">Features</h3>
+                        <h3 class="uppercase">{{'Features' | trans }}</h3>
                     </li>                        
                     <li class="nav-item  ">
                         <a href="javascript:;" class="nav-link nav-toggle">
                             <i class="icon-diamond"></i>
-                            <span class="title">DATA SOURCES</span>
+                            <span class="title">{{'DATA SOURCES' | trans }}</span>
                             <span class="arrow"></span>
                         </a>
                         <ul class="sub-menu">
                             <li class="nav-item  ">
                                 <a href="#" class="nav-link ">
-                                    <span class="title">Add</span>       
+                                    <span class="title">{{'Add' | trans }}</span>       
                                 </a>                                  
                             </li>
 
                             <li class="nav-item  ">
                                 <a href="#" class="nav-link ">
-                                    <span class="title">List</span>       
+                                    <span class="title">{{'List' | trans }}</span>       
                                 </a>                                  
                             </li>
                         </ul>
@@ -474,19 +474,19 @@ License: You must have a valid license purchased only from themeforest(the above
                     <li class="nav-item  ">
                         <a href="javascript:;" class="nav-link nav-toggle">
                             <i class="icon-layers"></i>
-                            <span class="title">CUBES</span>
+                            <span class="title">{{'CUBES' | trans }}</span>
                             <span class="arrow"></span>
                         </a>
                         <ul class="sub-menu">
                             <li class="nav-item  ">
                                 <a href="{{ path("cb_cubes_add") }}" class="nav-link ">
-                                    <span class="title">Add</span>       
+                                    <span class="title">{{'Add' | trans }}</span>       
                                 </a>                                  
                             </li>
 
                             <li class="nav-item  ">
                                 <a href="{{ path("cb_cubes_list") }}" class="nav-link nav-toggle">
-                                    <span class="title">Accounting</span>
+                                    <span class="title">{{'Accounting' | trans }}</span>
                                 </a>
                             </li>
                         </ul> 
@@ -495,41 +495,41 @@ License: You must have a valid license purchased only from themeforest(the above
                     <li class="nav-item  ">
                         <a href="javascript:;" class="nav-link nav-toggle">
                             <i class="icon-folder"></i>
-                            <span class="title">REPORTS</span>
+                            <span class="title">{{'REPORTS' | trans }}</span>
                             <span class="arrow"></span>
                         </a>
                         <ul class="sub-menu">
                             <li class="nav-item  ">
                                 <a href="#" class="nav-link ">
-                                    <span class="title">Add</span>       
+                                    <span class="title">{{'Add' | trans }}</span>       
                                 </a>                                  
                             </li>
 
                             <li class="nav-item  ">
                                 <a href="#" class="nav-link ">
-                                    <span class="title">List</span>       
+                                    <span class="title">{{'List' | trans }}</span>       
                                 </a>                                  
                             </li>
                         </ul>
                     </li>
                     <li class="heading">
-                        <h3 class="uppercase">Administration</h3>
+                        <h3 class="uppercase">{{'Administration' | trans }}</h3>
                     </li>
                     <li class="nav-item  ">
                         <a href="javascript:;" class="nav-link nav-toggle">
                             <i class="icon-pie-chart"></i>
-                            <span class="title">DASHBOARD</span>
+                            <span class="title">{{'DASHBOARD' | trans }}</span>
                             <span class="arrow"></span>
                         </a>
                         <ul class="sub-menu">
                             <li class="nav-item  ">
                                 <a href="{{ path("db_dashboard_list") }}" class="nav-link ">
-                                    <span class="title">Dashboards</span>       
+                                    <span class="title">{{'Dashboards' | trans }}</span>       
                                 </a>
                             </li>
                             <li class="nav-item  ">
                                 <a href="{{ path("db_widget_list") }}" class="nav-link ">
-                                    <span class="title">Widgets</span>       
+                                    <span class="title">{{'Widgets' | trans }}</span>       
                                 </a>
                             </li>
                             <!--
@@ -547,18 +547,18 @@ License: You must have a valid license purchased only from themeforest(the above
                     <li class="nav-item  ">
                         <a href="javascript:;" class="nav-link nav-toggle">
                             <i class="icon-login"></i>
-                            <span class="title">ACCESS</span>
+                            <span class="title">{{'ACCESS' | trans }}</span>
                             <span class="arrow"></span>
                         </a>
                         <ul class="sub-menu">
                             <li class="nav-item  ">
-                                <a href="{{ path("ab_users_list") }}" class="nav-link ">
-                                    <span class="title">User</span>       
+                                <a href="{{ path("ab_user_list") }}" class="nav-link ">
+                                    <span class="title">{{'User' | trans }}</span>       
                                 </a>
                             </li>
                             <li class="nav-item  ">
                                 <a href="{{ path("ab_entities_list") }}" class="nav-link ">
-                                    <span class="title">Entities</span>       
+                                    <span class="title">{{'Entities' | trans }}</span>       
                                 </a>
                             </li>
                             <!--
@@ -709,7 +709,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <div class="page-quick-sidebar">
         <ul class="nav nav-tabs">
             <li class="active">
-                <a href="javascript:;" data-target="#quick_sidebar_tab_1" data-toggle="tab"> Users
+                <a href="javascript:;" data-target="#quick_sidebar_tab_1" data-toggle="tab"> User
                     <span class="badge badge-danger">2</span>
                 </a>
             </li>
@@ -745,7 +745,7 @@ License: You must have a valid license purchased only from themeforest(the above
         </ul>
         <div class="tab-content">
             <div class="tab-pane active page-quick-sidebar-chat" id="quick_sidebar_tab_1">
-                <div class="page-quick-sidebar-chat-users" data-rail-color="#ddd" data-wrapper-class="page-quick-sidebar-list">
+                <div class="page-quick-sidebar-chat-user" data-rail-color="#ddd" data-wrapper-class="page-quick-sidebar-list">
                     <h3 class="list-heading">Staff</h3>
                     <ul class="media-list list-items">
                         <li class="media">

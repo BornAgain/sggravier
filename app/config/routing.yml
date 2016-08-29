@@ -1,17 +1,17 @@
 dashboard:
     resource: "@DashboardBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /t-admin
 
 cubes:
     resource: "@CubesBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /t-admin
 
 admin:
     resource: "@AdminBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /t-admin
 
 sample:
     resource: "@SampleBundle/Controller/"
@@ -21,7 +21,7 @@ sample:
 data_source:
     resource: "@DataSourceBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /t-admin
 
 app:
     resource: "@AppBundle/Controller/"

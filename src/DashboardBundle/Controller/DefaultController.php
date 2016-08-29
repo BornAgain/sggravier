@@ -9,7 +9,7 @@ use Ob\HighchartsBundle\Highcharts\Highchart;
 class DefaultController extends Controller {
 
     /**
-     * @Route("/",name="dh_dashboard")
+     * @Route("/dh",name="dh_dashboard")
      */
     public function indexAction() {
 

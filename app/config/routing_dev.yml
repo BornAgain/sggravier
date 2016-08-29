@@ -12,3 +12,8 @@ _errors:
 
 _main:
     resource: routing.yml
+    
+    
+admin_translation:
+    path:     /traduction/{name}
+    defaults: { _controller: AdminBundle:Default:traduction }

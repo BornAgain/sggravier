@@ -1,0 +1,39 @@
+dashboard:
+    resource: "@DashboardBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+cubes:
+    resource: "@CubesBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+admin:
+    resource: "@AdminBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+sample:
+    resource: "@SampleBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+data_source:
+    resource: "@DataSourceBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+login:
+    path: /login
+    defaults:
+        _controller: AdminBundle:Security:login
+
+login_check:
+    path: /login_check
+    
+logout:
+    path: /logout

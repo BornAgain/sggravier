@@ -1,0 +1,62 @@
+# src/AdminBundle/Resources/translations/messages.fr.yml
+
+Hello: Bonjour
+Home: Accueil
+Save: enregistrer
+user_list: Liste des utilisateurs
+Dashboard: Tableau de bord
+Dashboards: Tableaux de bord
+DASHBOARD: TABLEAU DE BORD
+Features: Caractéristiques
+Search...: Chercher...
+Access management: Gestion des accès
+DATA SOURCES: SOURCES DE DONNÉES
+Entries: Entrées
+Description: Déscription
+Widgets: Widgets
+Features: Caractéristiques
+User: Utilisateur
+Name: Nom
+Type: Type
+Position: Position
+Update date: Date de mise à jour
+Search: Chercher
+Add: Ajouter
+List: Liste
+Cubes: Cubes
+REPORTS: RAPPORTS
+Accounting: Comptabilité
+Contract: Contrat
+Loc Contract: contrat Loc
+ADMINISTRATION: ADMINISTRATION
+entries: entrées
+Description: Déscription
+See: Voir
+Update: Mettre à jour
+Cancel: Annuler
+Remove: Supprimer
+Enabled: Activée
+User: Utilisateur
+UserId: Id d'utilisateur
+Username: Nom d'utilisateur
+Lastname: Nom
+Password: Mot de Passe 
+Firstname: Prénom
+Mail: Courrier 
+Roles: Rôles
+Lastname: Nom
+View: Vue
+Login: Identifiant
+Creation date: Date De Création
+Modification date: Date De Modification
+Institution Name: Nom de l'institution
+Admin: Administration
+CUBES: CUBES
+ACCESS: ACCÈS
+Short Label: Nom Technique
+Entities: Entités
+entries: entrées
+Delete: Supprimer
+Dashboard Name: Nom Du Tableau de bord
+Query: Question
+Widgets: Widgets

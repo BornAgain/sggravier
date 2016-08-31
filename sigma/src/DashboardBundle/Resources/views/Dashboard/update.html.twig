@@ -1,0 +1,36 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}DashboardBundle:Dashboard:update{% endblock %}
+
+{% block pageTitle %}
+    <li>
+        <a href="{{ path("db_dashboard_list") }}">{{'Dashboards' | trans }}</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <b>{{'Update' | trans }}</b>
+    </li>
+{% endblock %}
+
+{% block body %}
+
+    <div class="box box-primary">
+        <div class="box-header"></div>
+        <!-- /.box-header -->
+        {{ form_start(form, {'method': 'POST'}) }}
+        <div class="box-body row">
+            <div class="form-group col-md-12">
+                <label for="dashboard_name_id">{{'Name' | trans }}</label>
+                {{ form_widget(form.name, {'attr': {'id' : 'dashboard_name_id','class': 'form-control','placeholder': 'Dashboard Name'}}) }}
+            </div>                
+        </div>
+
+        <div class="box-footer pull-right">
+            <a href="{{ path ("db_dashboard_list")}}"> <input class="btn btn-success" type="{{'submit' | trans }}" value="{{'Save' | trans }}"/> </a>
+            <a href="{{ path ("db_dashboard_list")}}"> <input class="btn btn-success" type="{{'submit' | trans }}" value="{{'Cancel' | trans }}"/> </a>
+
+        </div>
+        {{ form_end(form) }}
+    </div>
+    
+{% endblock %}

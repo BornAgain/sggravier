@@ -1,0 +1,170 @@
+{% extends '::base.html.twig' %}
+
+{% block pageTitle %}
+    <li>
+        <a href="{{ path("db_dashboard_list") }}">Dashboards</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <a href="{{ path("db_dashboard_list") }}">Datasource</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <b>Wizard</b>
+    </li>
+{% endblock %}
+
+{% block stylesheets %}        
+    <link href="{{ asset('assets/global/plugins/select2/css/select2.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/global/plugins/select2/css/select2-bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+
+{% block body %}
+    <!-- BEGIN CONTENT BODY -->
+    <div class="row">
+        <div class="col-md-12">                            
+            <div class="portlet light bordered" id="form_wizard_1">                                
+                <div class="portlet-body form">
+
+
+                    <div class="form-wizard">
+                        <div class="form-body">
+                            <ul class="nav nav-pills nav-justified steps">
+                                <li>
+                                    <a href="#tb1" data-toggle="tab" class="step">
+                                        <span class="number"> 1 </span>
+                                        <span class="desc">
+                                            <i class="fa fa-check"></i> General </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#tb2" data-toggle="tab" class="step">
+                                        <span class="number"> 2 </span>
+                                        <span class="desc">
+                                            <i class="fa fa-check"></i> Source </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#tb3" data-toggle="tab" class="step active">
+                                        <span class="number"> 3 </span>
+                                        <span class="desc">
+                                            <i class="fa fa-check"></i> Définition </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#tb4" data-toggle="tab" class="step">
+                                        <span class="number"> 4 </span>
+                                        <span class="desc">
+                                            <i class="fa fa-check"></i> Confirm </span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div id="bar" class="progress progress-striped" role="progressbar">
+                                <div class="progress-bar progress-bar-success" style="width: 100%;"></div>
+                            </div>
+                            <div class="tab-content">
+                                <div class="alert alert-danger display-none">
+                                    <button class="close" data-dismiss="alert"></button> You have some form errors. Please check below. </div>
+                                <div class="alert alert-success display-none">
+                                    <button class="close" data-dismiss="alert"></button> Your form validation is successful! </div>
+                                <div class="tab-pane" id="tab1">                                                        
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Title
+                                            <span class="required"> * </span>
+                                        </label>
+                                        <div class="col-md-4">                                                                
+
+                                            <span class="help-block"> Provide your title </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Short name
+                                            <span class="required"> * </span>
+                                        </label>
+                                        <div class="col-md-4">
+
+                                            <span class="help-block"> Short name. </span>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Enabled
+                                            <span class="required"> * </span>
+                                        </label>
+                                        <div class="col-md-4">
+                                            <div class="checkbox-list">
+                                                <label>                                                                        
+
+                                            </div>
+                                            <div id="form_gender_error"> </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                                <div class="tab-pane" id="tab2">                                                        
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">File
+                                            <span class="required"> * </span>
+                                        </label>
+                                        <div class="col-md-4">
+
+                                            <span class="help-block"> Provide your fullname </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="tab-pane" id="tab3">                                                        
+                                    
+
+                                </div>
+                                <div class="tab-pane active" id="tab4">                                                        
+                                    <h2 class="text-center">
+                                        Data imported with success
+                                    </h2>                                    
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <div class="row">
+                            <div class="col-md-offset-3 col-md-9">
+                                <a href="javascript:;" class="btn default button-previous">
+                                    <i class="fa fa-angle-left"></i> Back </a>
+                                <button type="submit" value="Send"  class="btn green button-submit"> Finish
+                                    <i class="fa fa-check"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END CONTENT BODY -->
+{% endblock %}
+
+
+{% block plg_javascripts %}
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    <script src="{{ asset('assets/global/plugins/select2/js/select2.full.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('assets/global/plugins/jquery-validation/js/jquery.validate.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('assets/global/plugins/jquery-validation/js/additional-methods.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('assets/global/plugins/bootstrap-wizard/jquery.bootstrap.wizard.min.js') }}" type="text/javascript"></script>
+    <!-- END PAGE LEVEL PLUGINS -->
+{% endblock %}
+
+{% block script_javascripts %}
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    {#<script src="{{ asset('assets/pages/scripts/form-wizard.min.js') }}" type="text/javascript"></script>    #}
+    <!-- END PAGE LEVEL PLUGINS -->
+{% endblock %} 
+
+

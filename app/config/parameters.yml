@@ -11,4 +11,6 @@ parameters:
     mailer_password: null
     secret: ThisTokenIsNotSoSecretChangeIt
     
-    locale: fr
+    locale: en
+    app_root_files: /home/itss/Bureau/sg_data/
+    mongo_database_name: sigmareport_db    

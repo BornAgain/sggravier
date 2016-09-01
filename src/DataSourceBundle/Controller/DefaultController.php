@@ -4,6 +4,7 @@ namespace DataSourceBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Services;
 
 /**
  * @Route("/datasource")
@@ -86,6 +87,10 @@ class DefaultController extends Controller {
             $file->move($rootDir, $fileName);
             $entity->setUrl($rootDir . $fileName);
 
+            // Importer le fichier
+            $mgMg = new \Services\MongoManager();
+            $mgMg->importCsv($this->container->getParameter('mongo_database_name'), $datasource->getName(), 'csv', $entity->getUrl());
+
             $entity->setName($fileName);
             $entity->setType("string");
             $entity->setContent("content");
@@ -125,28 +130,42 @@ class DefaultController extends Controller {
         $formBuilder = $this->createFormBuilder($data);
 
         foreach ($dataHeader as $key => $value) {
-            $formBuilder->add($value, "checkbox",array('required' => false));
+            $formBuilder->add($value, "checkbox", array('required' => false));
         }
-        $formBuilder->add("Submit", "submit");
+        // $formBuilder->add("Submit", "submit");
         $form = $formBuilder->getForm();
+        
+        /* if ($form->handleRequest($request)->isValid()) {
+          $data = $form->getData();
+          $headerArray = array();
+          foreach ($headerArray as $key => $value) {
+          if($value == true)
+          $headerArray[] = $key;
+          }
+          $file->setHeader(implode("|", $headerArray));
+          $em = $this->getDoctrine()->getManager();
+          $em->persist($datasource);
+          $em->flush();
+          //            $request->getSession()->getFlashBag()->add('notice', 'Annonce bien enregistrée.');
+          return $this->redirect($this->generateUrl('ds_default_stp3', array('id' => $datasource->getId())));
+          } */
 
-        if ($form->handleRequest($request)->isValid()) {
-            $data = $form->getData();
-            $headerArray = array();
-            foreach ($headerArray as $key => $value) {
-                if($value == true)
-                    $headerArray[] = $key;
-            }
-            $file->setHeader(implode("|", $headerArray));
+        return $this->render("DataSourceBundle:Default:stp3.html.twig", array(
+                    "form" => $form->createView(),
+                    "headers" => $dataHeader,
+                    "id_dt" => $datasource->getId()
+        ));
+    }
+    
+    /**
+     * @Route("/add/step4/{id}", name="ds_default_stp4")
+     */
+    public function step4Action(\Symfony\Component\HttpFoundation\Request $request, \DataSourceBundle\Entity\Datasource $datasource) {
+            $datasource->setNotBuild(FALSE);
             $em = $this->getDoctrine()->getManager();
             $em->persist($datasource);
             $em->flush();
-//            $request->getSession()->getFlashBag()->add('notice', 'Annonce bien enregistrée.');
-            return $this->redirect($this->generateUrl('ds_default_stp3', array('id' => $datasource->getId())));
-        }
-
-        return $this->render("DataSourceBundle:Default:stp3.html.twig", array(
-                    "form" => $form->createView()
+        return $this->render("DataSourceBundle:Default:stp4.html.twig", array(
         ));
     }
 

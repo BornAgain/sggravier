@@ -1,7 +1,17 @@
 {% extends '::base.html.twig' %}
 
-{% block titlePage %}
-    {#DATASOURCE <small>Wizard</small>#}
+{% block pageTitle %}
+    <li>
+        <a href="{{ path("db_dashboard_list") }}">Dashboards</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <a href="{{ path("db_dashboard_list") }}">Datasource</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <b>Wizard</b>
+    </li>
 {% endblock %}
 
 {% block stylesheets %}        
@@ -22,28 +32,28 @@
                                             <div class="form-body">
                                                 <ul class="nav nav-pills nav-justified steps">
                                                     <li>
-                                                        <a href="#tab1" data-toggle="tab" class="step">
+                                                        <a href="#tb1" data-toggle="tab" class="step">
                                                             <span class="number"> 1 </span>
                                                             <span class="desc">
                                                                 <i class="fa fa-check"></i> General </span>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="#tab2" data-toggle="tab" class="step">
+                                                        <a href="#tb2" data-toggle="tab" class="step">
                                                             <span class="number"> 2 </span>
                                                             <span class="desc">
                                                                 <i class="fa fa-check"></i> Source </span>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="#tab3" data-toggle="tab" class="step active">
+                                                        <a href="#tb3" data-toggle="tab" class="step active">
                                                             <span class="number"> 3 </span>
                                                             <span class="desc">
                                                                 <i class="fa fa-check"></i> Définition </span>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="#tab4" data-toggle="tab" class="step">
+                                                        <a href="#tb4" data-toggle="tab" class="step">
                                                             <span class="number"> 4 </span>
                                                             <span class="desc">
                                                                 <i class="fa fa-check"></i> Confirm </span>
@@ -101,8 +111,8 @@
                                                                 <span class="required"> * </span>
                                                             </label>
                                                             <div class="col-md-4">
-                                                                {{ form_widget(form.file, {'attr': {'class': 'form-control', 'placeholder': 'Title'}}) }}
-                                                                <span class="help-block"> Provide your fullname </span>
+                                                                {{ form_widget(form.file, {'attr': {'class': 'form-control2', 'placeholder': 'Title'}}) }}
+                                                                <span class="help-block"> Upload File </span>
                                                             </div>
                                                         </div>
                                                         

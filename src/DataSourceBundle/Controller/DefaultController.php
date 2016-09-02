@@ -11,15 +11,17 @@ use Services;
  */
 class DefaultController extends Controller {
 
+
+
     /**
-     * @Route("/", name="Dashboard")
+     * @Route("/", name="ds_default_list")
      */
     public function indexAction() {
         $entities = $this->getDoctrine()->getManager()->getRepository("DataSourceBundle:Datasource")->findAll();
 
-        return array(
-            'entities' => $entities
-        );
+        return $this->render("DataSourceBundle:Default:index.html.twig", array(
+                    'entities' => $entities
+        ));
     }
 
     /**
@@ -131,10 +133,26 @@ class DefaultController extends Controller {
 
         foreach ($dataHeader as $key => $value) {
             $formBuilder->add($value, "checkbox", array('required' => false));
+            $dtDetail = new \DataSourceBundle\Entity\DatasourceDetails();
+            $dtDetail->setName($value);
+
+            $dtDetail->setEnabled(TRUE);
+            $dtDetail->setRank($key);
+            $dtDetail->setType('string');
+            $datasource->addDatasourceDetail($dtDetail);
         }
+
+
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($datasource);
+        $em->flush();
+
+
+
+
         // $formBuilder->add("Submit", "submit");
         $form = $formBuilder->getForm();
-        
+
         /* if ($form->handleRequest($request)->isValid()) {
           $data = $form->getData();
           $headerArray = array();
@@ -156,15 +174,15 @@ class DefaultController extends Controller {
                     "id_dt" => $datasource->getId()
         ));
     }
-    
+
     /**
      * @Route("/add/step4/{id}", name="ds_default_stp4")
      */
     public function step4Action(\Symfony\Component\HttpFoundation\Request $request, \DataSourceBundle\Entity\Datasource $datasource) {
-            $datasource->setNotBuild(FALSE);
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($datasource);
-            $em->flush();
+        $datasource->setNotBuild(FALSE);
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($datasource);
+        $em->flush();
         return $this->render("DataSourceBundle:Default:stp4.html.twig", array(
         ));
     }

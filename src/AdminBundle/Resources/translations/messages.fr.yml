@@ -1,66 +1,63 @@
 # src/AdminBundle/Resources/translations/messages.fr.yml
 
-Hello: Bonjour
-Home: Accueil
+hello: bonjour
+home: accueil
 Save: enregistrer
-user_list: Liste des utilisateurs
-Dashboard: Tableau de bord
-Dashboards: Tableaux de bord
+user_list: liste des utilisateurs
+dashboard: tableau de bord
+dashboards: tableaux de bord
 DASHBOARD: TABLEAU DE BORD
-Features: Caractéristiques
-Search...: Chercher...
-Access management: Gestion des accès
-DATA SOURCES: SOURCES DE DONNÉES
-Entries: Entrées
-Description: Déscription
-Widgets: Widgets
-Features: Caractéristiques
-User: Utilisateur
-Name: Nom
-Type: Type
-Position: Position
-Update date: Date de mise à jour
-Search: Chercher
-Add: Ajouter
-List: Liste
-Cubes: Cubes
-REPORTS: RAPPORTS
-Accounting: Comptabilité
-Contract: Contrat
-Loc Contract: contrat Loc
-ADMINISTRATION: ADMINISTRATION
-entries: entrées
-Description: Déscription
-See: Voir
-Update: Mettre à jour
-Cancel: Annuler
-Remove: Supprimer
-Enabled: Activée
-User: Utilisateur
-UserId: Id d'utilisateur
-Username: Nom d'utilisateur
-Lastname: Nom
-Password: Mot de Passe 
-Firstname: Prénom
-Email: Adress E-mail 
-Roles: Rôles
-Lastname: Nom
-View: Vue
-Login: Identifiant
-Creation date: Date De Création
-Modification date: Date De Modification
-Institution Name: Nom de l'institution
-Admin: Administration
-CUBES: CUBES
-ACCESS: ACCÈS
-Short Label: Nom Technique
-Entities: Entités
-entries: entrées
-Delete: Supprimer
-Dashboard Name: Nom Du Tableau de bord
-Query: Question
-Widgets: Widgets
-MY_PROFIL: Mon Profile
-HELP: Aide
-LOGOUT: Deconnexion
+features: caractéristiques
+search...: chercher...
+search: chercher
+access_management: gestion des accees
+data_sources: sources de données
+entries: entrees
+description: déscription
+widgets: widgets
+user: utilisateur
+name: nom
+type: type
+position: position
+update_date: date de mise a jour
+add: ajouter
+list: liste
+cubes: cubes
+reports: rapports
+accounting: comptabilite
+contract: contrat
+loc_contract: contrat Loc
+administration: administration
+entries: entrees
+description: description
+see: voir
+update: mettre a jour
+cancel: annuler
+remove: supprimer
+enabled: activee
+user_id: id d'utilisateur
+user_name: nom d'utilisateur
+password: mot de Passe 
+first_name: prenom
+email: adresse Mail 
+roles: rôles
+last_name: nom
+view: vue
+login: identifiant
+creation_date: date de creation
+modification_date: date de modification
+institution_name: nom de l'institution
+admin: administration
+cubes: cubes
+access: acces
+short_label: nom technique
+entities: entites
+entries: entrees
+delete: supprimer
+dashboard_name: nom du tableau de bord
+query: question
+widgets: widgets
+my_profil: Mon Profile
+help: aide
+logout: deconnexion
 

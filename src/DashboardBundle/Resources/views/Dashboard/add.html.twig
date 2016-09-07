@@ -4,11 +4,11 @@
 
 {% block pageTitle %}
     <li>
-        <a href="{{ path("db_dashboard_list") }}">Dashboards</a>
+        <a href="{{ path("db_dashboard_list") }}">{{'dashboards' | trans }}</a>
         <i class="fa fa-circle"></i>
     </li>
     <li>
-        <b>Add</b>
+        <b>{{'add' | trans }}</b>
     </li>
 {% endblock %}
 
@@ -19,14 +19,14 @@
         {{ form_start(form, {'method': 'POST'}) }}
         <div class="box-body row">
             <div class="form-group">
-                <label for="dashboard_name_id">{{ form_label(form.name) }}</label>
+                <label for="dashboard_name_id">{{'name' | trans }}</label>
                 {{ form_widget(form.name, {'attr': {'tabindex' : '1','id' : 'dashboard_name_id','class': 'form-control','placeholder': 'Dashboard name'}}) }}
             </div>   
             
         </div>
         
         <div class="box-footer pull-right">
-            <a href="{{ path ("db_dashboard_list")}}"> <input class="btn btn-success" type="submit" value="Save"/> </a>
+            <a href="{{ path ("db_dashboard_list")}}"> <input class="btn btn-success" type="submit" value="{{'save' | trans }}"/> </a>
         </div>
         {{ form_end(form) }}
     </div>

@@ -7,8 +7,13 @@
 {% endblock %}
 
 {% block pageTitle %}
+    
     <li>
-        <b>Dashboards</b>
+        <a href="{{ path("db_dashboard_list") }}">{{'dashboards' | trans }}</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <b>{{'list' | trans }}</b>
     </li>
 {% endblock %}
 
@@ -16,21 +21,22 @@
 {% block body %}
     
     <div class="box-footer" style="border-bottom: 15px">
-        <a href="{{ path ("db_dashboard_add")}}"> <input class="btn btn-success" type="submit" value="Add"/> </a>
+        <a class="btn btn-success" href="{{ path("db_dashboard_add") }}" title="{{'add' | trans }}"><i class="glyphicon glyphicon-plus" ></i></a>
     </div>
+    
     <br/>
             
     <table class="table table-striped table-bordered table-hover table-header-fixed" id="sample_1">
         <thead>
             <tr class="table table-striped table-bordered table-hover table-header-fixed " id="sample_1">
-                <th>Name</th>
-                <th>Update Date</th>
+                <th>{{'name' | trans }}</th>
+                <th>{{'update_date' | trans }}</th>
             </tr>
         </thead>
         <tbody>
             {% for entity in entities %}
                 <tr>
-                    <td><a href="{{ path("db_dashboard_see",{'id':entity.id}) }}"title="view">{{ entity.Name }}</a></td>
+                    <td><a href="{{ path("db_dashboard_see",{'id':entity.id}) }}"title="{{'view' | trans }}">{{ entity.Name }}</a></td>
                     <td>{{ entity.updateDate | date("Y-m-d H:i:s")}}</td>
                 </tr>
             {% endfor %}

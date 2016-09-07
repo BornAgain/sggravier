@@ -1,0 +1,19 @@
+# src/DataDourceBundle/Resources/translations/messages.fr.yml
+
+Hello: Bonjour
+general: general
+definition: definition
+confirm: confirmer
+short_name: name court
+provide_your_title: fournir votre titre
+enabled: activee
+dashboards: tableaux de bord
+datasource: source de donnees
+wizard: ajout
+general: general
+fullname: nom complet
+confirm_creation: confirmer la creation
+back: retour
+continue: continuer
+
+

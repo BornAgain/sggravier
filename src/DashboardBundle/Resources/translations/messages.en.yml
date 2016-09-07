@@ -1,0 +1,32 @@
+# src/DashboardBundle/Resources/translations/messages.en.yml
+
+Bonjour: Hello
+general: general
+definition: definition
+confirmer: confirm 
+source: source
+tableaux_de_bord: dashboards
+tableau de bord: dashboard
+titre: title
+nom_court: short name
+activee: enabled
+retour: back
+continuer: continue
+nom: name
+enregistrer: save
+ajouter: add
+liste: list
+date_de_mise_a_jour: update date
+vue: view
+voir: see
+nom_du_tableau_de_bord: dashboard name
+mettre_a_jour: update 
+supprimer: delete
+annuler: cancel 
+type: type
+position: position
+question: query
+    
+
+
+

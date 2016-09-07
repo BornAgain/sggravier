@@ -2,15 +2,15 @@
 
 {% block pageTitle %}
     <li>
-        <a href="{{ path("db_dashboard_list") }}">Dashboards</a>
+        <a href="{{ path("db_dashboard_list") }}">{{'dashboards' | trans }}</a>
         <i class="fa fa-circle"></i>
     </li>
     <li>
-        <a href="{{ path("db_dashboard_list") }}">Datasource</a>
+        <a href="{{ path("db_dashboard_list") }}">{{'datasource' | trans }}</a>
         <i class="fa fa-circle"></i>
     </li>
     <li>
-        <b>Wizard</b>
+        <b>{{'wizard' | trans }}</b>
     </li>
 {% endblock %}
 
@@ -35,28 +35,28 @@
                                                         <a href="#tb1" data-toggle="tab" class="step">
                                                             <span class="number"> 1 </span>
                                                             <span class="desc">
-                                                                <i class="fa fa-check"></i> General </span>
+                                                                <i class="fa fa-check"></i>{{'general' | trans }}</span>
                                                         </a>
                                                     </li>
                                                     <li>
                                                         <a href="#tb2" data-toggle="tab" class="step">
                                                             <span class="number"> 2 </span>
                                                             <span class="desc">
-                                                                <i class="fa fa-check"></i> Source </span>
+                                                                <i class="fa fa-check"></i> Source{{'general' | trans }}</span>
                                                         </a>
                                                     </li>
                                                     <li>
                                                         <a href="#tb3" data-toggle="tab" class="step active">
                                                             <span class="number"> 3 </span>
                                                             <span class="desc">
-                                                                <i class="fa fa-check"></i> Définition </span>
+                                                                <i class="fa fa-check"></i> Définition{{'general' | trans }}</span>
                                                         </a>
                                                     </li>
                                                     <li>
                                                         <a href="#tb4" data-toggle="tab" class="step">
                                                             <span class="number"> 4 </span>
                                                             <span class="desc">
-                                                                <i class="fa fa-check"></i> Confirm </span>
+                                                                <i class="fa fa-check"></i> Confirm{{'general' | trans }}</span>
                                                         </a>
                                                     </li>
                                                 </ul>
@@ -70,16 +70,16 @@
                                                         <button class="close" data-dismiss="alert"></button> Your form validation is successful! </div>
                                                     <div class="tab-pane active" id="tab1">                                                        
                                                         <div class="form-group">
-                                                            <label class="control-label col-md-3">Title
+                                                            <label class="control-label col-md-3">Title{{'general' | trans }}
                                                                 <span class="required"> * </span>
                                                             </label>
                                                             <div class="col-md-4">                                                                
                                                                 {{ form_widget(form.title, {'attr': {'class': 'form-control', 'placeholder': 'Title'}}) }}
-                                                                <span class="help-block"> Provide your title </span>
+                                                                <span class="help-block">{{'provide_your_title' | trans }}</span>
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
-                                                            <label class="control-label col-md-3">Short name
+                                                            <label class="control-label col-md-3">{{'short_name' | trans }}
                                                                 <span class="required"> * </span>
                                                             </label>
                                                             <div class="col-md-4">
@@ -90,7 +90,7 @@
                                                         
                                                         
                                                         <div class="form-group">
-                                                            <label class="control-label col-md-3">Enabled
+                                                            <label class="control-label col-md-3">{{'enabled' | trans }}
                                                                 <span class="required"> * </span>
                                                             </label>
                                                             <div class="col-md-4">
@@ -107,7 +107,7 @@
                                                     </div>
                                                     <div class="tab-pane" id="tab2">                                                        
                                                         <div class="form-group">
-                                                            <label class="control-label col-md-3">Fullname
+                                                            <label class="control-label col-md-3">{{'fullname' | trans }}
                                                                 <span class="required"> * </span>
                                                             </label>
                                                             <div class="col-md-4">
@@ -119,17 +119,17 @@
                                                     </div>
                                                     <div class="tab-pane" id="tab3">                                                        
                                                         <div class="form-group">
-                                                            <label class="control-label col-md-3">Fullname
+                                                            <label class="control-label col-md-3">Fullname{{'general' | trans }}
                                                                 <span class="required"> * </span>
                                                             </label>
                                                             <div class="col-md-4">
                                                                 <input type="text" class="form-control" name="fullname" />
-                                                                <span class="help-block"> Provide your fullname </span>
+                                                                <span class="help-block">{{'provide_ your_fullname' | trans }}</span>
                                                             </div>
                                                         </div>                                                       
                                                     </div>
                                                     <div class="tab-pane" id="tab4">
-                                                        <h3 class="block">Confirm creation</h3>                                                        
+                                                        <h3 class="block">{{'confirm_creation' | trans }}</h3>                                                        
                                                     </div>
                                                 </div>
                                             </div>
@@ -137,8 +137,8 @@
                                                 <div class="row">
                                                     <div class="col-md-offset-3 col-md-9">
                                                         <a href="javascript:;" class="btn default button-previous">
-                                                            <i class="fa fa-angle-left"></i> Back </a>
-                                                        <button type="submit" value="Send"  class="btn green button-submit"> Continue
+                                                            <i class="fa fa-angle-left"></i>{{'back' | trans }}</a>
+                                                        <button type="submit" value="Send"  class="btn green button-submit">{{'continue' | trans }}
                                                             <i class="fa fa-angle-right"></i>
                                                         </button>
                                                     </div>

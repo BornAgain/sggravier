@@ -21,137 +21,137 @@
 
 
 {% block body %}
-    <!-- BEGIN CONTENT BODY -->
-    <div class="row">
-        <div class="col-md-12">                            
-            <div class="portlet light bordered" id="form_wizard_1">                                
-                <div class="portlet-body form">
-
-                    {{ form_start(form, { 'attr': {'class': 'form-horizontal', 'method': 'POST', 'id': 'submit_form' } }) }}  
-                    <div class="form-wizard">
-                        <div class="form-body">
-                            <ul class="nav nav-pills nav-justified steps">
-                                <li>
-                                    <a href="#tb1" data-toggle="tab" class="step">
-                                        <span class="number"> 1 </span>
-                                        <span class="desc">
-                                            <i class="fa fa-check"></i> General </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#tb2" data-toggle="tab" class="step">
-                                        <span class="number"> 2 </span>
-                                        <span class="desc">
-                                            <i class="fa fa-check"></i> Source </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#tb3" data-toggle="tab" class="step active">
-                                        <span class="number"> 3 </span>
-                                        <span class="desc">
-                                            <i class="fa fa-check"></i> Définition </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#tb4" data-toggle="tab" class="step">
-                                        <span class="number"> 4 </span>
-                                        <span class="desc">
-                                            <i class="fa fa-check"></i> Confirm </span>
-                                    </a>
-                                </li>
-                            </ul>
-                            <div id="bar" class="progress progress-striped" role="progressbar">
-                                <div class="progress-bar progress-bar-success" style="width: 50%;"></div>
-                            </div>
-                            <div class="tab-content">
-                                <div class="alert alert-danger display-none">
-                                    <button class="close" data-dismiss="alert"></button> You have some form errors. Please check below. </div>
-                                <div class="alert alert-success display-none">
-                                    <button class="close" data-dismiss="alert"></button> Your form validation is successful! </div>
-                                <div class="tab-pane" id="tab1">                                                        
-                                    <div class="form-group">
-                                        <label class="control-label col-md-3">Title
-                                            <span class="required"> * </span>
-                                        </label>
-                                        <div class="col-md-4">                                                                
-
-                                            <span class="help-block"> Provide your title </span>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label col-md-3">Short name
-                                            <span class="required"> * </span>
-                                        </label>
-                                        <div class="col-md-4">
-
-                                            <span class="help-block"> Short name. </span>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="form-group">
-                                        <label class="control-label col-md-3">Enabled
-                                            <span class="required"> * </span>
-                                        </label>
-                                        <div class="col-md-4">
-                                            <div class="checkbox-list">
-                                                <label>                                                                        
-
+  <!-- BEGIN CONTENT BODY -->
+                    <div class="row">
+                        <div class="col-md-12">                            
+                            <div class="portlet light bordered" id="form_wizard_1">                                
+                                <div class="portlet-body form">
+                                    
+                                    {{ form_start(form, { 'attr': {'class': 'form-horizontal', 'method': 'POST', 'id': 'submit_form' } }) }}  
+                                    <div class="form-wizard">
+                                            <div class="form-body">
+                                                <ul class="nav nav-pills nav-justified steps">
+                                                    <li>
+                                                        <a href="#tb1" data-toggle="tab" class="step">
+                                                            <span class="number"> 1 </span>
+                                                            <span class="desc">
+                                                                <i class="fa fa-check"></i> General </span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#tb2" data-toggle="tab" class="step">
+                                                            <span class="number"> 2 </span>
+                                                            <span class="desc">
+                                                                <i class="fa fa-check"></i> Source </span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#tb3" data-toggle="tab" class="step active">
+                                                            <span class="number"> 3 </span>
+                                                            <span class="desc">
+                                                                <i class="fa fa-check"></i> Définition </span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#tb4" data-toggle="tab" class="step">
+                                                            <span class="number"> 4 </span>
+                                                            <span class="desc">
+                                                                <i class="fa fa-check"></i> Confirm </span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <div id="bar" class="progress progress-striped" role="progressbar">
+                                                    <div class="progress-bar progress-bar-success" style="width: 50%;"></div>
+                                                </div>
+                                                <div class="tab-content">
+                                                    <div class="alert alert-danger display-none">
+                                                        <button class="close" data-dismiss="alert"></button> You have some form errors. Please check below. </div>
+                                                    <div class="alert alert-success display-none">
+                                                        <button class="close" data-dismiss="alert"></button> Your form validation is successful! </div>
+                                                    <div class="tab-pane" id="tab1">                                                        
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">Title
+                                                                <span class="required"> * </span>
+                                                            </label>
+                                                            <div class="col-md-4">                                                                
+                                                                
+                                                                <span class="help-block"> Provide your title </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">Short name
+                                                                <span class="required"> * </span>
+                                                            </label>
+                                                            <div class="col-md-4">
+                                                                
+                                                                <span class="help-block"> Short name. </span>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">Enabled
+                                                                <span class="required"> * </span>
+                                                            </label>
+                                                            <div class="col-md-4">
+                                                                <div class="checkbox-list">
+                                                                    <label>                                                                        
+                                                                        
+                                                                </div>
+                                                                <div id="form_gender_error"> </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        
+                                                        
+                                                    </div>
+                                                    <div class="tab-pane active" id="tab2">                                                        
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">File
+                                                                <span class="required"> * </span>
+                                                            </label>
+                                                            <div class="col-md-4">
+                                                                {{ form_widget(form.file, {'attr': {'class': 'form-control2', 'placeholder': 'Title'}}) }}
+                                                                <span class="help-block"> Upload File </span>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div class="tab-pane" id="tab3">                                                        
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">Fullname
+                                                                <span class="required"> * </span>
+                                                            </label>
+                                                            <div class="col-md-4">
+                                                                <input type="text" class="form-control" name="fullname" />
+                                                                <span class="help-block"> Provide your fullname </span>
+                                                            </div>
+                                                        </div>                                                       
+                                                    </div>
+                                                    <div class="tab-pane" id="tab4">
+                                                        <h3 class="block">Confirm creation</h3>                                                        
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div id="form_gender_error"> </div>
+                                            <div class="form-actions">
+                                                <div class="row">
+                                                    <div class="col-md-offset-3 col-md-9">
+                                                        <a href="javascript:;" class="btn default button-previous">
+                                                            <i class="fa fa-angle-left"></i> Back </a>
+                                                        <button type="submit" value="Send"  class="btn green button-submit"> Continue
+                                                            <i class="fa fa-angle-right"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-
-
-
-                                </div>
-                                <div class="tab-pane active" id="tab2">                                                        
-                                    <div class="form-group">
-                                        <label class="control-label col-md-3">File
-                                            <span class="required"> * </span>
-                                        </label>
-                                        <div class="col-md-4">
-                                            {{ form_widget(form.file, {'attr': {'class': 'form-control2', 'placeholder': 'Title','accept':'.csv'}}) }}
-                                            <span class="help-block"> Format : csv </span>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="tab-pane" id="tab3">                                                        
-                                    <div class="form-group">
-                                        <label class="control-label col-md-3">Fullname
-                                            <span class="required"> * </span>
-                                        </label>
-                                        <div class="col-md-4">
-                                            <input type="text" class="form-control" name="fullname" />
-                                            <span class="help-block"> Provide your fullname </span>
-                                        </div>
-                                    </div>                                                       
-                                </div>
-                                <div class="tab-pane" id="tab4">
-                                    <h3 class="block">Confirm creation</h3>                                                        
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-actions">
-                            <div class="row">
-                                <div class="col-md-offset-3 col-md-9">
-                                    <a href="javascript:;" class="btn default button-previous">
-                                        <i class="fa fa-angle-left"></i> Back </a>
-                                    <button type="submit" value="Send"  class="btn green button-submit"> Continue
-                                        <i class="fa fa-angle-right"></i>
-                                    </button>
+                                        {{ form_end(form) }}
+                                    
                                 </div>
                             </div>
                         </div>
                     </div>
-                    {{ form_end(form) }}
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END CONTENT BODY -->
+                <!-- END CONTENT BODY -->
 {% endblock %}
 
 

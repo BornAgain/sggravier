@@ -25,28 +25,28 @@
                                                         <a href="#tab1" data-toggle="tab" class="step">
                                                             <span class="number"> 1 </span>
                                                             <span class="desc">
-                                                                <i class="fa fa-check"></i> General </span>
+                                                                <i class="fa fa-check"></i>{{'general' | trans }}</span>
                                                         </a>
                                                     </li>
                                                     <li>
                                                         <a href="#tab2" data-toggle="tab" class="step">
                                                             <span class="number"> 2 </span>
                                                             <span class="desc">
-                                                                <i class="fa fa-check"></i> Source </span>
+                                                                <i class="fa fa-check"></i>{{'source' | trans }}</span>
                                                         </a>
                                                     </li>
                                                     <li>
                                                         <a href="#tab3" data-toggle="tab" class="step active">
                                                             <span class="number"> 3 </span>
                                                             <span class="desc">
-                                                                <i class="fa fa-check"></i> Définition </span>
+                                                                <i class="fa fa-check"></i>{{'definition' | trans }}</span>
                                                         </a>
                                                     </li>
                                                     <li>
                                                         <a href="#tab4" data-toggle="tab" class="step">
                                                             <span class="number"> 4 </span>
                                                             <span class="desc">
-                                                                <i class="fa fa-check"></i> Confirm </span>
+                                                                <i class="fa fa-check"></i>{{'confirm' | trans }}</span>
                                                         </a>
                                                     </li>
                                                 </ul>
@@ -65,7 +65,7 @@
                                                             </label>
                                                             <div class="col-md-4">                                                                
                                                                 {{ form_widget(form.title, {'attr': {'class': 'form-control', 'placeholder': 'Title'}}) }}
-                                                                <span class="help-block"> Provide your title </span>
+                                                                <span class="help-block">{{'provide_your_title' | trans }}</span>
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
@@ -74,13 +74,13 @@
                                                             </label>
                                                             <div class="col-md-4">
                                                                 {{ form_widget(form.name, {'attr': {'class': 'form-control', 'placeholder': 'Short Name'}}) }}
-                                                                <span class="help-block"> Short name. </span>
+                                                                <span class="help-block">{{'short_name.' | trans }}</span>
                                                             </div>
                                                         </div>
                                                         
                                                         
                                                         <div class="form-group">
-                                                            <label class="control-label col-md-3">Enabled
+                                                            <label class="control-label col-md-3">{{'Enabled' | trans }}
                                                                 <span class="required"> * </span>
                                                             </label>
                                                             <div class="col-md-4">

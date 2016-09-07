@@ -8,15 +8,15 @@
 
 {% block pageTitle %}
     <li>
-        <a href="index.html">Home</a>
+        <a href="index.html">{{'home :' | trans }}</a>
         <i class="fa fa-circle"></i>
     </li>
     <li>
-        <span>User</span>
+        <span>{{'user :' | trans }}</span>
         <i class="fa fa-circle"></i>
     </li>
     <li>
-        <b>Add</b>
+        <b>{{'add :' | trans }}</b>
     </li>
 {% endblock %}
 
@@ -33,10 +33,10 @@
 
   {# Le formulaire, avec URL de soumission vers la route « login_check » comme on l'a vu #}
   <form action="{{ path('login_check') }}" method="post">
-    <label for="username">Login :</label>
+    <label for="username">{{'login :' | trans }}</label>
     <input type="text" id="username" name="_username" value="{{ last_username }}" />
 
-    <label for="password">Mot de passe :</label>
+    <label for="password">{{'password :' | trans }}</label>
     <input type="password" id="password" name="_password" />
     <br />
     <input type="submit" value="Connexion" />

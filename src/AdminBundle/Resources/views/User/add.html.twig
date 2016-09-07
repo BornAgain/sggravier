@@ -8,15 +8,15 @@
 
 {% block pageTitle %}
     <li>
-        <a href="{{ path("db_dashboard_list") }}">{{'Dashboard' | trans }}</a>
+        <a href="{{ path("db_dashboard_list") }}">{{'dashboard' | trans }}</a>
         <i class="fa fa-circle"></i>
     </li>
     <li>
-        <a href="{{ path("ab_user_list") }}">{{'User' | trans }}</a>
+        <a href="{{ path("ab_user_list") }}">{{'user' | trans }}</a>
         <i class="fa fa-circle"></i>
     </li>
     <li>
-        <b>{{'Add' | trans }}</b>
+        <b>{{'add' | trans }}</b>
     </li>
 {% endblock %}
 
@@ -32,27 +32,27 @@
         {{ form_start(form, {'method': 'POST'}) }}
         <div class="box-body row">
             <div class="form-group col-md-6">
-                <label for="user_Id_id">{{'Username' | trans }}</label>
+                <label for="user_Id_id">{{'user_name' | trans }}</label>
                 {{ form_widget(form.username, {'attr': {'id' : 'user_userid_id','class': 'form-control','placeholder': 'Username'}}) }}
             </div>                
             <div class="form-group col-md-6">
-                <label for="user_Email_id">{{'Email' | trans }}</label>
+                <label for="user_Email_id">{{'email' | trans }}</label>
                 {{ form_widget(form.email, {'attr': {'id' : 'user_adressemail_id','class': 'form-control','placeholder': 'Email'}}) }}
             </div>
             <div class="form-group col-md-6">         
-      <label for="users_password_id">{{'Password' | trans }}</label>
-                {{ form_widget(form.password, {'attr': {'id' : 'users_password_id','class': 'form-control','placeholder': 'Password'}}) }}
+      <label for="user_password_id">{{'password' | trans }}</label>
+                {{ form_widget(form.password, {'attr': {'id' : 'user_password_id','class': 'form-control','placeholder': 'Password'}}) }}
             </div>
 
            <!-- <div class="form-group col-md-12 ">
-                <label for="multiple" class="control-label">{{'Roles' | trans }}</label>
+                <label for="multiple" class="control-label">{{'roles' | trans }}</label>
                 {# form_widget(form.roles, {'attr': {'id' : 'user_roles_id','class': 'form-control select2-multiple'}}) #}
             </div>   -->
         </div>
 
 
         <div class="box-footer pull-right">
-           <input class="btn btn-success" type="submit" value="{{'Save' | trans }}"/>
+           <input class="btn btn-success" type="submit" value="{{'save' | trans }}"/>
         </div>
         {#<div class="box-footer">
             {{ form_widget(form.enregistrer, {'attr': {'class': 'btn btn-primary'}}) }}

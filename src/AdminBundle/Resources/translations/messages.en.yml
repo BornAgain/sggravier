@@ -1,0 +1,63 @@
+# src/AdminBundle/Resources/translations/messages.en.yml
+
+bonjour: hello
+accueil: home
+enregistrer: Save
+liste_des_utilisateurs: user_list
+tableau_de_bord: dashboard
+tableaux_de_bord: dashboards
+TABLEAU_DE_BORD: DASHBOARD
+Caractéristiques: features
+Chercher...: search...
+Chercher: search
+gestion_des_accées: access_management
+sources_de_données: data_sources
+entrées: entries
+déscription: description
+widgets: widgets
+utilisateur: User
+nom: name
+type: type
+position: position
+date_de_mise_à_jour: update_date 
+ajouter: add
+liste: list
+cubes: cubes
+rapports: reports
+comptabilité: accounting
+contrat: contract
+contrat_Loc: loc_contract
+administration: administration 
+entrées: entries
+déscription: description
+voir: see
+mettre_à_jour: update
+annuler: cancel
+supprimer: remove
+activée: enabled
+id_d'utilisateur: user id
+nom_d'utilisateur: user name
+mot_de_Passe: password
+fprénom: irst name 
+adresse_Mail: email
+rôles: roles
+nom: last name
+vue: view
+identifiant: login
+date_de_création: creation date
+date_de_modification: modification date 
+nom_de_l'institution: institution name
+admin: administration
+cubes: cubes
+accès: access
+nom_technique: short label
+entités: entities
+entrées: entries
+supprimer: delete
+nom_du_tableau_de_bord: dashboard name 
+question: query
+widgets: widgets
+Mon_Profile: my_profil
+aide: help
+deconnexion: logout
+

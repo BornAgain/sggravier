@@ -8,15 +8,15 @@
 
 {% block pageTitle %}
     <li>
-        <a href="{{ path("db_dashboard_list") }}">{{'Dashboard' | trans }}</a>
+        <a href="{{ path("db_dashboard_list") }}">{{'dashboard' | trans }}</a>
         <i class="fa fa-circle"></i>
     </li>
     <li>
-        <a href="{{ path("ab_entities_list") }}">{{'Entities' | trans }}</a>
+        <a href="{{ path("ab_entities_list") }}">{{'entities' | trans }}</a>
         <i class="fa fa-circle"></i>
     </li>
     <li>
-        <b>{{'List' | trans }}</b>
+        <b>{{'list' | trans }}</b>
     </li>
     
 {% endblock %}
@@ -24,22 +24,22 @@
 {% block body %}
     
     <div class="box-footer" style="border-bottom: 15px">
-        <a class="btn btn-success" href="{{ path("ab_entities_add") }}" title="{{'Add' | trans }}"><i class="glyphicon glyphicon-plus" ></i></a>
+        <a class="btn btn-success" href="{{ path("ab_entities_add") }}" title="{{'add' | trans }}"><i class="glyphicon glyphicon-plus" ></i></a>
     </div>
     <br/>
 
     <table class="table table-striped table-bordered table-hover table-header-fixed" id="sample_1">
         <thead>
             <tr class="table table-striped table-bordered table-hover table-header-fixed" id="sample_1">
-                <th>{{'Description' | trans }}	</th>
-                <th>{{'Short Label' | trans }}	</th>   
-                <th>{{'Update date' | trans }}	</th>
+                <th>{{'description' | trans }}	</th>
+                <th>{{'short_label' | trans }}	</th>   
+                <th>{{'update_date' | trans }}	</th>
             </tr>
         </thead>
         <tbody>
             {% for entity in entities %}
                 <tr>
-                    <td><a href="{{ path("ab_entities_see",{'id':entity.id}) }}" title="{{'View' | trans }}">{{ entity.Description }}</a></td>
+                    <td><a href="{{ path("ab_entities_see",{'id':entity.id}) }}" title="{{'view' | trans }}">{{ entity.Description }}</a></td>
                     <td>{{ entity.ShortLabel }}</td>    
                     <td>{{ entity.updateDate | date('Y-m-d H:i:s') }}</td> 
                 </tr>

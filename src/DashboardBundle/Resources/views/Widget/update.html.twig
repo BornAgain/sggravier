@@ -2,15 +2,15 @@
 
 {% block pageTitle %}
     <li>
-        <a href="{{ path("db_dashboard_list") }}">Dashboard</a>
+        <a href="{{ path("db_dashboard_list") }}">{{'dashboard' | trans }}</a>
         <i class="fa fa-circle"></i>
     </li>
     <li>
-        <a href="{{ path("db_widget_list") }}">Widgets</a>
+        <a href="{{ path("db_widget_list") }}">{{'widgets' | trans }}</a>
         <i class="fa fa-circle"></i>
     </li>
     <li>
-        <b>Update</b>
+        <b>{{'update' | trans }}</b>
     </li>
 {% endblock %}
 
@@ -22,30 +22,30 @@
         {{ form_start(form, {'method': 'POST'}) }}
         <div class="box-body row">                        
             <div class="form-group col-md-6">
-                <label for="widget_type_name">{{ form_label(form.name) }}</label>
+                <label for="widget_type_name">{{'name' | trans }}</label>
                 {{ form_widget(form.name, {'attr': {'tabindex' : '1','id' : 'widget_type_id','class': 'form-control','placeholder': 'Widget name'}}) }}
             </div> 
             <div class="form-group col-md-6">
-                <label for="widget_type_id">{{ form_label(form.type) }}</label>
+                <label for="widget_type_id">{{'type' | trans }}</label>
                 {{ form_widget(form.type, {'attr': {'tabindex' : '1','id' : 'widget_type_id','class': 'form-control','placeholder': 'Widget type'}}) }}
             </div>  
             <div class="form-group col-md-6">
-                <label for="widget_position_id">{{ form_label(form.position) }}</label>
+                <label for="widget_position_id">{{'position' | trans }}</label>
                 {{ form_widget(form.position, {'attr': {'tabindex' : '1','id' : 'widget_position_id','class': 'form-control','placeholder': 'Widget position'}}) }}
             </div>
             <div class="form-group col-md-6">
-                <label for="widget_query_id">{{ form_label(form.query) }}</label>
+                <label for="widget_query_id">{{'query' | trans }}</label>
                 {{ form_widget(form.query, {'attr': {'tabindex' : '1','id' : 'widget_query_id','class': 'form-control','placeholder': 'Query'}}) }}
             </div>
             <div class="form-group col-md-6 col-md-offset-6">
-                <label for="multiple" class="control-label">Dashboard</label>
+                <label for="multiple" class="control-label">{{'dashboard' | trans }}</label>
                 {{ form_widget(form.dashboard, {'attr': {'tabindex' : '1','id' : 'widget_position_id','class': 'form-control','placeholder': 'Widget position'}}) }}
             </div>            
         </div>
 
         <div class="box-footer pull-right">
-            <a href="{{ path ("db_widget_list")}}"> <input class="btn btn-success" type="submit" value="Save"/> </a>
-            <a href="{{ path ("db_widget_list")}}"> <input class="btn btn-success" type="submit" value="Cancel"/> </a>
+            <a href="{{ path ("db_widget_list")}}"> <input class="btn btn-success" type="submit" value="{{'save' | trans }}"/> </a>
+            <a href="{{ path ("db_widget_list")}}"> <input class="btn btn-success" type="submit" value="{{'cancel' | trans }}"/> </a>
 
         </div>
         {{ form_end(form) }}

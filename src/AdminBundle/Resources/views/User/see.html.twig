@@ -5,15 +5,15 @@
 
 {% block pageTitle %}
     <li>
-        <a href="{{ path("db_dashboard_list") }}">{{'Dashboard' | trans }}</a>
+        <a href="{{ path("db_dashboard_list") }}">{{'dashboard' | trans }}</a>
         <i class="fa fa-circle"></i>
     </li>
     <li>
-        <a href="{{ path("ab_user_list") }}">{{'User' | trans }}</a>
+        <a href="{{ path("ab_user_list") }}">{{'user' | trans }}</a>
         <i class="fa fa-circle"></i>
     </li>
     <li>
-        <b>{{'See' | trans }}</b>
+        <b>{{'see' | trans }}</b>
     </li>
 {% endblock %}
 
@@ -28,21 +28,21 @@
         </div><!-- /.box-header -->
         <div class="box-body">
     <div class="form-group col-md-6">
-                <label for="country">{{'UserId' | trans }}</label>
+                <label for="country">{{'user_id' | trans }}</label>
                 <div class="form-control">{{ entity.username }}</div>      
             </div>                 
     <div class="form-group col-md-6">
-                <label for="country">{{'Email' | trans }}</label>
+                <label for="country">{{'email' | trans }}</label>
                 <div class="form-control">{{ entity.email }}</div>                    
             </div>
-  <!--  <div class="form-group col-md-6">
-                <label for="country">{{'Update date' | trans }}</label>
+    <!--    <div class="form-group col-md-6">
+                <label for="country">{#'Update date' | trans #}</label>
                 <div class="form-control">{# entity.updateDate | date('Y-m-d H:i:s')#}</div>                    
-            </div> -->
+            </div>  -->
 
             <div class="box-footer pull-right">
-                <a href="{{ path ("ab_user_update", {'id':entity.id})}}"> <input class="btn btn-success" type="submit" value="{{'Update' | trans }}"/> </a>
-                <a href="{{ path ("ab_user_delete", {'id':entity.id})}}"> <input class="btn btn-success" type="submit" value="{{'Delete' | trans }}"/> </a>
+                <a href="{{ path ("ab_user_update", {'id':entity.id})}}"> <input class="btn btn-success" type="submit" value="{{'update' | trans }}"/> </a>
+                <a href="{{ path ("ab_user_delete", {'id':entity.id})}}"> <input class="btn btn-success" type="submit" value="{{'delete' | trans }}"/> </a>
 
             </div>
         </div><!-- /.box-body -->

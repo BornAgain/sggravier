@@ -2,15 +2,15 @@
 
 {% block pageTitle %}
     <li>
-        <a href="{{ path("db_dashboard_list") }}">Dashboard</a>
+        <a href="{{ path("db_dashboard_list") }}">{{'dashboard' | trans }}</a>
         <i class="fa fa-circle"></i>
     </li>
     <li>
-        <a href="{{ path("db_widget_list") }}">Widgets</a>
+        <a href="{{ path("db_widget_list") }}">{{'widgets' | trans }}</a>
         <i class="fa fa-circle"></i>
     </li>
     <li>
-        <b>See</b>
+        <b>{{'see' | trans }}</b>
     </li>
 {% endblock %}
 
@@ -26,33 +26,33 @@
         <div class="box-body">
             
             <div class="form-group col-md-6">
-                <label for="country">Type</label>
+                <label for="country">{{'type' | trans }}</label>
                 <div class="form-control">{{ entity.type }}</div>                    
             </div> 
             
             <div class="form-group col-md-6">
-                <label for="country">Name</label>
+                <label for="country">{{'name' | trans }}</label>
                 <div class="form-control">{{ entity.type }}</div>                    
             </div>
             
             <div class="form-group col-md-6">
-                <label for="country">Position</label>
+                <label for="country">{{'position' | trans }}</label>
                 <div class="form-control">{{ entity.position }}</div>                    
             </div>
             
             <div class="form-group col-md-6">
-                <label for="country">Query</label>
+                <label for="country">{{'query' | trans }}</label>
                 <div class="form-control">{{ entity.query }}</div>                    
             </div>
             <div class="form-group col-md-6">
-                <label for="country">Update date</label>
+                <label for="country">{{'update_date' | trans }}</label>
                 <div class="form-control">{{ entity.updateDate | date('Y-m-d H:i:s') }}</div>                    
             </div>
             
             
             <div class="box-footer pull-right">
-                <a href="{{ path ("db_widget_update", {'id':entity.id})}}"> <input class="btn btn-success" type="submit" value="Update"/> </a>
-                <a href="{{ path ("db_widget_delete", {'id':entity.id})}}"> <input class="btn btn-success" type="submit" value="Delete"/> </a>
+                <a href="{{ path ("db_widget_update", {'id':entity.id})}}"> <input class="btn btn-success" type="submit" value="{{'update' | trans }}"/> </a>
+                <a href="{{ path ("db_widget_delete", {'id':entity.id})}}"> <input class="btn btn-success" type="submit" value="{{'delete' | trans }}"/> </a>
 
             </div>
 
